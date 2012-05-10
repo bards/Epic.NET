@@ -17,14 +17,15 @@ To meet new contributors we created a [mailing list][1] quite early.
 
 Since we have previous experience in framework development, we know that keeping
 track of the path that lead to a decision is often more important that the 
-decision itself. As a consequence, if you join us, you have to partecipate to our brainstorms and decisions via the mailing list itself.
+decision itself. As a consequence, if you join us, you have to partecipate to 
+our brainstorms and decisions via the mailing list itself.
 
 The mailing list keeps an informal tone, but you have to know the 
 [netiquette][2] and to be respectful about the other contributors' opinions.
 
 Fork the code base
 ------------------
-First of all, you need a [Github][3] account. If you are new to git, please
+First of all, you need a [github][3] account. If you are new to git, please
 take a look to the [Pro Git book][4] and follow the github's help on [forks][5]
 and in [collaborative development models][6] (we adopt the Fork + Pull model).
 
@@ -52,7 +53,7 @@ As for version control we adopt this general rules:
 1. Fork on GitHub (click Fork button)
 2. Clone to computer (`$ git clone git@github.com:you/Epic.NET.git`)
 3. Don’t forget to cd into your repo: (`$ cd Epic.NET/`)
-4. Set up remote upstream (`$ git remote add upstream git://github.com/Shamar/Epic.NET.git`)
+4. Set up remote upstream (`$ git remote add upstream git://github.com/bards/Epic.NET.git`)
 5. Be sure to be in devel (`$ git checkout devel`)
 6. Create a branch for the activity (`$ git checkout -b 123-class-rename`, if you don’t have a bug report no worries just skip the number)
 7. Develop on your brandnew branch. _[Time passes, the main Epic.NET repository accumulates new commits]_
@@ -91,7 +92,7 @@ will not be able to accept any contribute of yours.
 
 A piece of glory
 ----------------
-As a contributor of Epic.NET, you will be listed in the credits' page.
+As a contributor of Epic.NET, you will be listed in the [credits' page][cretits].
 
 If you desire, your name will be linked to any of [URI][12] that concerns you 
 (be it your website, your blog, your linkedin account and so on).
@@ -113,3 +114,4 @@ This might be not a big reward for your work, just a way to show our gratitude.
 [12]: http://tools.ietf.org/rfc/rfc3986.txt
 [fla]: http://epic.tesio.it/doc/FLA.pdf
 [fla2]: http://epic.tesio.it/2011/09/25/governance-and-copyright.html#license_agreements
+[cretits]: http://epic.tesio.it/credits.html "The Epic bards"
