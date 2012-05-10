@@ -88,8 +88,8 @@ On page 4, you can simply put "All code and documentation contributed to the
 Epic.NET project" or if you wish to be more specific please do so. For example 
 you could write something like:
 
-> All contributions sent to the source code repository maintained by Giacomo 
-> (at the time of this writing, github.com/Shamar/Epic.NET) by beneﬁciary under 
+> All contributions sent to the source code repository hosted at
+> [github.com/bards/Epic.NET][bards-repo] by beneﬁciary under 
 > the account name *YourUsernameHere* on or before the date of this document.
 
 (Note however, that such statement, will impose that you sigh a the FLA 
@@ -110,7 +110,7 @@ To my money, you should contribute to Epic.NET if
 
 1. you need it ready for production as soon as possible
 2. you have a long object-oriented programming experience
-3. you want to join a small but high skilled community of developers 
+3. you want to join a small but high skilled [community][credits] of developers 
    and architects
 4. you want to add it to your resume.
 
@@ -136,3 +136,5 @@ carefully. I always do.
 [fla-code]: https://gist.github.com/1240610
 [fsfe-fla]: http://fsfe.org/projects/ftf/fla.en.html
 [bacula-fla]: http://www.bacula.org/en/?page=fla
+[credits]: http://epic.tesio.it/credits.html
+[bards-repo]: https://github.com/bards/Epic.NET
