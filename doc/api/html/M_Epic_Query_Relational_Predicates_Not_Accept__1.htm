@@ -1,0 +1,50 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" /><title>Accept Method (visitor, context)</title><link rel="icon" href="http://epic.tesio.it/favicon.ico" /><link rel="alternate" type="application/atom+xml" title="Development log" href="http://epic.tesio.it/atom.xml" /><!--[if !IE 7]>
+    <style type="text/css">
+		#epic-wrap {display:table;height:100%}
+	</style>
+  <![endif]--><!--[if lt IE 8]>
+    <style type="text/css">
+        #epic-header {padding-top: 9px}
+    </xsl:element>
+  <![endif]--><!--[if IE 8]>
+    <style type="text/css">
+		#epic-wrap {width:100%}
+	</style>
+  <![endif]--><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23846269-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script><link rel="stylesheet" type="text/css" href="../styles/layout.css" /><link rel="stylesheet" type="text/css" href="../styles/screen.css" /><script type="text/javascript" src="../scripts/script_prototype.js"> </script><script type="text/javascript" src="../scripts/EventUtilities.js"> </script><script type="text/javascript" src="../scripts/StyleUtilities.js"> </script><script type="text/javascript" src="../scripts/SplitScreen.js"> </script><script type="text/javascript" src="../scripts/ElementCollection.js"> </script><script type="text/javascript" src="../scripts/MemberFilter.js"> </script><script type="text/javascript" src="../scripts/LanguageFilter.js"> </script><script type="text/javascript" src="../scripts/CookieDataStore.js"> </script><meta name="file" id="metaFilename" content="M_Epic_Query_Relational_Predicates_Not_Accept__1" /></head><body><div id="epic-wrap"><div id="epic-header"><a href="https://github.com/bards/Epic.NET"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><a class="title" href="/">Epic</a><span>dominant domains</span></div><div id="epic-main"><div id="epic-content"><ul class="epic-menu"><li><a href="/index.html">Overview</a></li><li><a href="/roadmap.html">Roadmap</a></li><li><a href="/blog.html" title="Development blog">Blog</a></li><li><a href="/doc/manual.html">Documentation</a></li><li><a href="http://github.com/Shamar/Epic.NET/archives/master">Download</a></li><li><a href="/license.html">License</a></li><li><a href="/credits.html">Bards</a></li></ul><div id="epic-api"><div id="control"><div id="toolbar"><span id="chickenFeet"><a href="R_Project_Documentation.htm">API</a> ► <a href="N_Epic_Query_Relational_Predicates.htm">Epic.Query.Relational.Predicates</a> ► <a href="T_Epic_Query_Relational_Predicates_Not.htm">Not</a> ► <span class="selflink">Accept<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="fs">&lt;'</span><span class="nu">(</span></span>TResult<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="fs">&gt;</span><span class="nu">)</span></span>(IVisitor<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="fs">&lt;'</span><span class="nu">(</span></span>TResult<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="fs">&gt;</span><span class="nu">)</span></span>, IVisitContext)</span></span></div><br /><span class="topicTitle">Accept<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><span class="typeparameter">TResult</span><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span> Method (visitor, context)</span></div><div id="main"><span style="color: DarkGray"></span><div class="summary">
+            Accept the specified visitor and context.
+            </div><p style="padding-bottom:20px;"><b>Assembly</b>: <span sdata="assembly">Epic.Query</span></p><div class="section"><div class="sectionTitle">Declaration Syntax</div><div class="sectionContent"><div id="syntaxSection"><table class="filter"><tr class="tabs" id="syntaxTabs"><td class="tab" x-lang="CSharp" onclick="toggleClass('syntaxTabs','x-lang','CSharp','activeTab','tab'); toggleStyle('syntaxBlocks','x-lang','CSharp','display','block','none');">C#</td></tr></table><div id="syntaxBlocks"><div class="code" x-lang="CSharp"><pre xml:space="preserve">
+<span class="keyword">public</span> <span class="keyword">override</span> TResult <span class="identifier">Accept</span>&lt;TResult&gt;(
+	<a href="T_Epic_IVisitor_1.htm">IVisitor</a>&lt;TResult&gt; <span class="parameter">visitor</span>,
+	<a href="T_Epic_IVisitContext.htm">IVisitContext</a> <span class="parameter">context</span>
+)
+</pre></div></div></div></div></div><div class="section"><div class="sectionTitle">Generic Template Parameters</div><div class="sectionContent"><dl><dt><span class="parameter">TResult</span></dt><dd>
+            The 1st type parameter.
+            </dd></dl></div></div><div id="parameters"><div class="section"><div class="sectionTitle">Parameters</div><div class="sectionContent"><dl paramName="visitor"><dt><span class="parameter">visitor</span> (<a href="T_Epic_IVisitor_1.htm">IVisitor</a><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><span class="selflink"><span class="typeparam">TResult</span></span><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span>)</dt><dd>
+            Visitor.
+            </dd></dl><dl paramName="context"><dt><span class="parameter">context</span> (<a href="T_Epic_IVisitContext.htm">IVisitContext</a>)</dt><dd>
+            Context.
+            </dd></dl></div></div></div><div class="section"><div class="sectionTitle">Return Value</div><div class="sectionContent"><p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[Missing &lt;returns&gt; documentation for "M:Epic.Query.Relational.Predicates.Not.Accept``1(Epic.IVisitor{``0},Epic.IVisitContext)"]</p></div></div></div></div></div></div></div><div id="disqus_thread" /><script type="text/javascript">
+    var disqus_shortname = 'epic-net'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    var disqus_identifier = document.getElementById('metaFilename').content;
+    var disqus_url = 'http://epic.tesio.it/doc/api/'+disqus_identifier+'.htm';
+    var disqus_title = "Accept Method (visitor, context)";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a><div id="epic-footer"><div class="epic-copyright">Copyright © 2010-2012 Giacomo Tesio</div></div></body></html>

@@ -1,0 +1,503 @@
+/*
+ This CSS clones the Epic.NET site ones adapting it to Sandcastle output.
+ */
+body {
+	font-family: "Verdana", "Arial", "sans-serif";
+}
+#epic-header {
+	height : 150px;
+	background:url('http://epic.tesio.it/logo.png') no-repeat 74% 23px;
+	padding-top: 8px;
+}
+#epic-header a.title {
+	border-bottom : 1px solid black;
+	padding-left : -100%;
+	font-size : 1px;
+	height : 114px;
+	color:white;
+	display:block;
+}
+#epic-header span {
+	padding-left : 15%;
+	font-family:serif;
+	letter-spacing:10px
+}
+#epic-content {
+	display : block;
+	padding-top: 30px;
+	/*width:65%;*/
+	padding-left: 10%;
+	padding-bottom: 30px;
+}
+ul.epic-menu {
+	letter-spacing:3px;
+	float:right;
+	padding-bottom: 30px;
+	background-color: #ffffff;
+	/*display : absolute;
+	position:fixed;
+	top:30%;
+	right:3%;*/
+	z-index:0;
+	width : 20%;
+	list-style: none;
+}
+ul.epic-menu li {
+	display: inline;
+	padding: 0;
+}
+ul.epic-menu a {
+        color:blue;
+	display : block;
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+	text-decoration: none;
+	padding:5px;
+	padding-left:20px;
+}
+ul.epic-menu a:hover {
+	display : block;
+	border-left: 1px solid gray;
+	border-bottom: 1px solid gray;
+	text-decoration: none;
+	padding:5px;
+	padding-left:20px;
+}
+dl.roadmap { display: block; padding-bottom: 20px }
+dl.roadmap dt { font-weight:bold }
+dl.roadmap dt.done { color:#238E23; }
+dl.roadmap dd span.date { font-weight:normal;color:#545454;padding-right:50px }
+dl.roadmap dd a.minibutton{text-decoration:none}
+div.epic-copyright {
+	display : block;
+	border-top: 1px solid gray;
+	padding-top:10px;
+	text-align:center;
+	font-family:serif;
+	font-size:small;
+}
+
+ul.posts {
+  list-style-type: none;
+  margin-bottom: 2em;
+  clear:left;
+}
+
+  ul.posts li {
+    line-height: 1.75em;
+  }
+
+  ul.posts span {
+    color: #aaa;
+    font-family: Monaco, "Courier New", monospace;
+    font-size: 80%;
+  }
+
+.feed{display:block;padding-top:10px;line-height:40px;}
+.feed span {padding-left:10px;}
+
+.minibutton{position:relative;font-family:helvetica,arial,freesans,clean,sans-serif;display:inline-block;height:21px;padding:0 0 0 3px;font-size:11px;font-weight:bold;color:#333;text-shadow:1px 1px 0 #fff;white-space:nowrap;border:none;overflow:visible;cursor:pointer;border:1px solid #d4d4d4;-webkit-border-radius:3px;-moz-border-radius:3px;border-radius:3px;background:#f4f4f4;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#f4f4f4',endColorstr='#ececec');background:-webkit-gradient(linear,left top,left bottom,from(#f4f4f4),to(#ececec));background:-moz-linear-gradient(top,#f4f4f4,#ececec);}
+.minibutton>span{display:block;height:21px;padding:0 9px 0 7px;line-height:21px;}
+.minibutton:hover{color:#fff;text-decoration:none;text-shadow:-1px -1px 0 rgba(0,0,0,0.3);border-color:#518cc6;border-bottom-color:#2a65a0;background:#599bdc;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#599bdc',endColorstr='#3072b3');background:-webkit-gradient(linear,left top,left bottom,from(#599bdc),to(#3072b3));background:-moz-linear-gradient(top,#599bdc,#3072b3);}
+.minibutton.mousedown{border-color:#2a65a0;border-bottom-color:#518cc6;background:#3072b3;filter:progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#3072b3',endColorstr='#599bdc');background:-webkit-gradient(linear,left top,left bottom,from(#3072b3),to(#599bdc));background:-moz-linear-gradient(top,#3072b3,#599bdc);}
+
+div.footnotes { display:block; font-size:small; padding-top:200px; }
+
+/* 
+    Epic.API presentation 
+*/
+table {border-collapse: collapse;}
+
+
+
+table.filter {
+    min-width: 100%;
+}
+table.filter tr.tabs td.tab {
+	width: 10em;
+	background: #F7F7FF;
+	padding: 0.2em;
+	text-align: left;
+	color: #000066;
+	font-weight: normal;
+	overflow: hidden;
+	cursor: pointer;
+}
+
+tr#syntaxTabs {display : none;}
+
+table.filter tr.tabs td.activeTab {
+	width: 10em;
+	background: #EFEFF7;
+	padding: 0.2em;
+	text-align: left;
+	color: #000066;
+	font-weight: bold;
+	overflow: hidden;
+}
+
+table.filter td.line {
+	background: #EFEFF7;
+}
+table.exceptions {
+	table-layout: fixed;
+	width: 100%;
+}
+
+
+table.exceptions th.exceptionNameColumn {
+	width: 40%;
+}
+
+table.exceptions th.exceptionConditionColumn {
+	width: 60%;
+}
+
+table.exceptions th {
+	border-bottom-color: #C8CDDE;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	background: #EFEFF7;
+	padding: 0.2em;
+	text-align: left;
+	color: #000066;
+	font-weight: bold;
+}
+
+table.exceptions td {
+	border-bottom-style: solid;
+	border-bottom-color: #C8CDDE;
+	border-bottom-width: 1px;
+	background: #F7F7FF;
+	padding: 0.2em;
+	vertical-align: top;
+}
+
+table.permissions {
+	table-layout: fixed;
+	width: 100%;
+}
+
+
+table.permissions th.permissionNameColumn {
+	width: 40%;
+}
+
+table.permissions th.permissionConditionColumn {
+	width: 60%;
+}
+
+table.permissions th {
+	border-bottom-color: #C8CDDE;
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	background: #EFEFF7;
+	padding: 0.2em;
+	text-align: left;
+	color: #000066;
+	font-weight: bold;
+}
+
+table.permissions td {
+	border-bottom-style: solid;
+	border-bottom-color: #C8CDDE;
+	border-bottom-width: 1px;
+	background: #F7F7FF;
+	padding: 0.2em;
+	vertical-align: top;
+}
+
+th.iconColumn {width: 75px;}
+
+table.members{min-width:100%}
+
+table.members th {
+background-color: #E5E5E5;
+padding-right: 4px;
+padding-left: 4px;
+padding-bottom: 4px;
+padding-top: 4px;
+text-align: left;
+height: 21px;
+font-family: 'Segoe UI',Verdana,Arial;
+font-size: 1.077em;
+color: black;
+font-style: normal;
+font-weight: normal;
+}
+
+table.members td {
+padding:4px;
+font-size:.825em;
+border-style: solid;
+border-width: 1px;
+border-color: #BBB;
+}
+ 
+
+span#languageFilter {
+	float: right;
+	height: 1px;
+	max-height: 1px;
+	vertical-align: bottom;
+	overflow: visible;
+}
+
+span.topicTitle {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #3F529C;
+}
+
+#chickenFeet span.selflink {
+	display:none;
+}
+
+span.obsolete {
+	color: red;
+}
+
+span.cs {
+	display: inline;
+}
+
+span.vb {
+	display: none;
+}
+
+span.cpp {
+	display: none;
+}
+
+span.fs {
+	display: none;
+}
+
+span.nu
+{
+	display: none;
+}
+
+/* syntax */
+div.code span.identifier {
+/*	font-weight: bold;*/
+}
+
+div.code span.keyword {
+	color: green;
+}
+
+div.code span.parameter {
+	font-style: italic;
+	color: purple;
+}
+
+div.code span.literal {
+	color: purple;
+}
+
+div.code span.comment {
+	color: red;
+}
+q
+{
+	font-style: italic;
+}
+span.foreignPhrase, span.phrase
+{
+	font-style: italic;
+}
+
+span.placeholder {
+	font-style: italic;
+}
+
+span.parameter
+{
+  font-style: italic;
+}
+
+span.typeparameter
+{
+  font-style: italic;
+}
+
+th.iconColumn {border: 1px solid black}
+th.nameColumn {border: 1px solid black}
+th.descriptionColumn {border: 1px solid black}
+
+/* sections */
+
+div#header {
+	font-size: 80%;
+	color: #666666;
+	padding-bottom: 0.5em;
+}
+
+div.summary {
+	padding-top: 0em;
+	padding-bottom: 1em;
+}
+
+div.section {
+	padding-bottom: 1em;
+}
+
+div.sectionTitle {
+	display: inline;
+	font-size: 120%;
+	font-weight: bold;
+	color: #003399;
+}
+
+div.sectionContent {
+	padding-top: 0.2em;
+}
+
+span.subsectionTitle {
+	font-weight: bold;
+}
+
+div#footer {
+	padding-top: 1em;
+	border-top: thin solid #003399;
+	padding-top: 0.5em;
+}
+
+div#footer p {
+	padding-top: 0.2em;
+	padding-bottom: 0.2em;
+}
+
+/* code blocks */
+/*Consolas,Courier,monospace*/
+div.code
+{
+	clear: both;
+	width: 100%;
+	background: #EFEFF7;
+	padding: 0.4em;
+    font-family: Consolas, "Courier New", Courier, monospace;
+    font-size: 9pt;
+	padding-bottom: 1em;
+}
+
+pre {
+	padding: 0;
+    font-family: Consolas, "Courier New", Courier, monospace;
+}
+
+/* Glossary styles */
+
+h1.glossaryTitle
+{
+  color: #000000;
+  font-size: 140%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+div.glossaryDiv
+{
+}
+
+h2.glossaryDivHeading
+{
+  color: Black;
+  font-size: 115%;
+  padding-top: 1em;
+  padding-bottom: 0px;
+}
+
+div.glossaryLetterBar
+{
+  font-size: 90%;
+}
+
+hr.glossaryRule
+{
+  text-align: left;
+  color: Black;
+}
+
+h3.glossaryGroupHeading
+{
+  font-size: 120%;
+  color: Gray;
+  padding: 5px 0 5px 0;
+}
+
+div.glossaryGroup
+{
+}
+
+dl.glossaryGroupList
+{
+  padding: 0;
+  color: Black;
+}
+
+dt.glossaryEntry
+{
+  font-weight: bold;
+  padding-left: 2em;
+}
+
+dd.glossaryEntry
+{
+  padding-left: 2em;
+  padding-bottom: 2em;
+}
+
+dd.glossaryEntry p
+{
+  margin-top: 0;
+}
+
+div.relatedEntry
+{
+  padding-bottom: 4px;
+}
+
+/* Bibliography */
+div.bibliographStyle
+{
+  padding-top:5px; 
+}
+
+span.bibliographyNumber
+{
+}
+
+span.bibliographyAuthor
+{
+  font-weight: bold;
+}
+
+span.bibliographyTitle
+{
+  font-style: italic;
+}
+
+span.bibliographyPublisher
+{
+}
+
+sup.citation a:link a:visited a:active
+{
+  text-decoration: none;
+}
+
+/* autoOutline styles */
+ul.autoOutline
+{
+}
+
+li.outlineSectionEntry
+{
+}
+
+div.outlineSectionEntrySummary
+{
+}
+

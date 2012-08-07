@@ -1,0 +1,42 @@
+﻿<html xmlns:MSHelp="http://msdn.microsoft.com/mshelp"><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" /><title>API</title><link rel="icon" href="http://epic.tesio.it/favicon.ico" /><link rel="alternate" type="application/atom+xml" title="Development log" href="http://epic.tesio.it/atom.xml" /><!--[if !IE 7]>
+    <style type="text/css">
+		#epic-wrap {display:table;height:100%}
+	</style>
+  <![endif]--><!--[if lt IE 8]>
+    <style type="text/css">
+        #epic-header {padding-top: 9px}
+    </xsl:element>
+  <![endif]--><!--[if IE 8]>
+    <style type="text/css">
+		#epic-wrap {width:100%}
+	</style>
+  <![endif]--><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23846269-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script><link rel="stylesheet" type="text/css" href="../styles/layout.css" /><link rel="stylesheet" type="text/css" href="../styles/screen.css" /><script type="text/javascript" src="../scripts/script_prototype.js"> </script><script type="text/javascript" src="../scripts/EventUtilities.js"> </script><script type="text/javascript" src="../scripts/StyleUtilities.js"> </script><script type="text/javascript" src="../scripts/SplitScreen.js"> </script><script type="text/javascript" src="../scripts/ElementCollection.js"> </script><script type="text/javascript" src="../scripts/MemberFilter.js"> </script><script type="text/javascript" src="../scripts/LanguageFilter.js"> </script><script type="text/javascript" src="../scripts/CookieDataStore.js"> </script><meta name="file" id="metaFilename" content="R_Project_Documentation" /></head><body><div id="epic-wrap"><div id="epic-header"><a href="https://github.com/bards/Epic.NET"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><a class="title" href="/">Epic</a><span>dominant domains</span></div><div id="epic-main"><div id="epic-content"><ul class="epic-menu"><li><a href="/index.html">Overview</a></li><li><a href="/roadmap.html">Roadmap</a></li><li><a href="/blog.html" title="Development blog">Blog</a></li><li><a href="/doc/manual.html">Documentation</a></li><li><a href="http://github.com/Shamar/Epic.NET/archives/master">Download</a></li><li><a href="/license.html">License</a></li><li><a href="/credits.html">Bards</a></li></ul><div id="epic-api"><div id="control"><div id="toolbar"><span id="chickenFeet"><span class="selflink">API</span></span></div><br /><span class="topicTitle">API</span></div><div id="main"><span style="color: DarkGray"></span><div class="summary">The Epic.NET code base consists of many different libraries that can work together in various combination, thanks to carefully designed responsibilities that lead to high cohesion and low coupling.<br /><br />
+TThis is the reference documentation of such libraries (whose objectives has been described in the <a href="http://epic.tesio.it/doc/the_bellis_perennis.html">second part of the manual</a>). There's no convention between DLL's names and namespaces, so that for example you will not find an Epic.Prelude namespace: while each library's name maps its usage pattern, namespaces express the logical organization of the modelled concepts.  </div><div class="section"><div class="sectionTitle">Namespaces</div><div class="sectionContent"><table class="members" id="memberList"><tr><th class="nameColumn">Namespace</th><th class="descriptionColumn">Description</th></tr><tr><td><b><a href="N_Epic.htm">Epic</a></b></td><td><div class="summary">The <b>Epic</b> namespace contains fundamental concepts that all Domain Driven applications built with the Epic's modeling patterns in mind will require.<br /><br />
+
+Epic.Prelude defines here <a href="T_Epic_IVisitable.htm">IVisitable</a> interface and the <b>Composite Visitor pattern</b>. <br />
+Epic.Core defines the <a href="T_Epic_Enterprise.htm">Enterprise</a> entry point to the domain model.</div><br /></td></tr><tr><td><b><a href="N_Epic_Collections.htm">Epic.Collections</a></b></td><td><div class="summary">The <b>Epic.Collections</b> namespace contains useful models of collections for DDD.<br />
+It's defined in Epic.Prelude.</div><br /></td></tr><tr><td><b><a href="N_Epic_Environment.htm">Epic.Environment</a></b></td><td><div class="summary" /><br /></td></tr><tr><td><b><a href="N_Epic_Events.htm">Epic.Events</a></b></td><td><div class="summary" /><br /></td></tr><tr><td><b><a href="N_Epic_Math.htm">Epic.Math</a></b></td><td><div class="summary" /><br /></td></tr><tr><td><b><a href="N_Epic_Organization.htm">Epic.Organization</a></b></td><td><div class="summary" /><br /></td></tr><tr><td><b><a href="N_Epic_Query.htm">Epic.Query</a></b></td><td><div class="summary" /><br /></td></tr><tr><td><b><a href="N_Epic_Query_Linq.htm">Epic.Query.Linq</a></b></td><td><div class="summary" /><br /></td></tr><tr><td><b><a href="N_Epic_Query_Linq_Expressions_Normalization.htm">Epic.Query.Linq.Expressions.Normalization</a></b></td><td><div class="summary" /><br /></td></tr><tr><td><b><a href="N_Epic_Query_Object.htm">Epic.Query.Object</a></b></td><td><div class="summary" /><br /></td></tr><tr><td><b><a href="N_Epic_Query_Object_Expressions.htm">Epic.Query.Object.Expressions</a></b></td><td><div class="summary" /><br /></td></tr><tr><td><b><a href="N_Epic_Query_Relational.htm">Epic.Query.Relational</a></b></td><td><div class="summary" /><br /></td></tr><tr><td><b><a href="N_Epic_Query_Relational_Operations.htm">Epic.Query.Relational.Operations</a></b></td><td><div class="summary" /><br /></td></tr><tr><td><b><a href="N_Epic_Query_Relational_Predicates.htm">Epic.Query.Relational.Predicates</a></b></td><td><div class="summary" /><br /></td></tr><tr><td><b><a href="N_Epic_Specifications.htm">Epic.Specifications</a></b></td><td><div class="summary" /><br /></td></tr></table></div></div></div></div></div></div></div><div id="disqus_thread" /><script type="text/javascript">
+    var disqus_shortname = 'epic-net'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    var disqus_identifier = document.getElementById('metaFilename').content;
+    var disqus_url = 'http://epic.tesio.it/doc/api/'+disqus_identifier+'.htm';
+    var disqus_title = "API";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a><div id="epic-footer"><div class="epic-copyright">Copyright © 2010-2012 Giacomo Tesio</div></div></body></html>
