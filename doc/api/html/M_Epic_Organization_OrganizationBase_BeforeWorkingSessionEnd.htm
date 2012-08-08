@@ -26,13 +26,13 @@
             Called before that <span class="parameter">workingSession</span> has been disposed.
             </div><p style="padding-bottom:20px;"><b>Assembly</b>: <span sdata="assembly">Epic.Core</span></p><div class="section"><div class="sectionTitle">Declaration Syntax</div><div class="sectionContent"><div id="syntaxSection"><table class="filter"><tr class="tabs" id="syntaxTabs"><td class="tab" x-lang="CSharp" onclick="toggleClass('syntaxTabs','x-lang','CSharp','activeTab','tab'); toggleStyle('syntaxBlocks','x-lang','CSharp','display','block','none');">C#</td></tr></table><div id="syntaxBlocks"><div class="code" x-lang="CSharp"><pre xml:space="preserve">
 <span class="keyword">protected</span> <span class="keyword">abstract</span> <span class="keyword">void</span> <span class="identifier">BeforeWorkingSessionEnd</span>(
-	<a href="http://msdn2.microsoft.com/en-us/library/f8kt7fb8" target="_blank">IPrincipal</a> <span class="parameter">owner</span>,
+	<span class="nolink">IPrincipal</span> <span class="parameter">owner</span>,
 	<a href="T_Epic_Organization_WorkingSessionBase.htm">WorkingSessionBase</a> <span class="parameter">workingSession</span>
-)</pre></div></div></div></div></div><div id="parameters"><div class="section"><div class="sectionTitle">Parameters</div><div class="sectionContent"><dl paramName="owner"><dt><span class="parameter">owner</span> (<a href="http://msdn2.microsoft.com/en-us/library/f8kt7fb8" target="_blank">IPrincipal</a>)</dt><dd>
+)</pre></div></div></div></div></div><div id="parameters"><div class="section"><div class="sectionTitle">Parameters</div><div class="sectionContent"><dl paramName="owner"><dt><span class="parameter">owner</span> (<span class="nolink">IPrincipal</span>)</dt><dd>
             The owner.
             </dd></dl><dl paramName="workingSession"><dt><span class="parameter">workingSession</span> (<a href="T_Epic_Organization_WorkingSessionBase.htm">WorkingSessionBase</a>)</dt><dd>
             The working session to end.
-            </dd></dl></div></div></div><div class="section"><div class="sectionTitle">Exceptions</div><div class="sectionContent"><table class="exceptions"><tr><th class="exceptionNameColumn">Exception</th><th class="exceptionConditionColumn">Condition</th></tr><tr><td><a href="http://msdn2.microsoft.com/en-us/library/2asft85a" target="_blank">InvalidOperationException</a></td><td><span class="parameter">owner</span> can not end 
+            </dd></dl></div></div></div><div class="section"><div class="sectionTitle">Exceptions</div><div class="sectionContent"><table class="exceptions"><tr><th class="exceptionNameColumn">Exception</th><th class="exceptionConditionColumn">Condition</th></tr><tr><td><span class="nolink">InvalidOperationException</span></td><td><span class="parameter">owner</span> can not end 
             <span class="parameter">workingSession</span>.<br /></td></tr></table></div></div></div></div></div></div></div><div id="disqus_thread" /><script type="text/javascript">
     var disqus_shortname = 'epic-net'; // required: replace example with your forum shortname
 
