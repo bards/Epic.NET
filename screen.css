@@ -109,15 +109,17 @@ a#api-button {
 	background:-ms-linear-gradient(top,#25A6E1 0%,#188BC0 100%);
 	background:linear-gradient(top,#25A6E1 0%,#188BC0 100%);
 	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#25A6E1',endColorstr='#188BC0',GradientType=0);
-	padding:8px 13px;
+	padding:10px 15px;
 	color:#fff;
 	font-family:'Helvetica Neue',sans-serif;
-	font-size:17px;
-	border-radius:4px;
-	-moz-border-radius:4px;
-	-webkit-border-radius:4px;
+	font-size:16px;
+	border-radius:5px;
+	-moz-border-radius:5px;
+	-webkit-border-radius:5px;
+	display: block;
 	width:35%;
-	border:1px solid #1A87B9
+	text-align: center;
+	border:1px solid #459A00
 }
 
 a#manual-button {
@@ -136,6 +138,8 @@ a#manual-button {
 	border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
+	display: block;
 	width:35%;
+	text-align: center;
 	border:1px solid #459A00
 }
