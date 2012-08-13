@@ -112,14 +112,15 @@ a#api-button {
 	padding:10px 15px;
 	color:#fff;
 	font-family:'Helvetica Neue',sans-serif;
-	font-size:16px;
+	font-size:20px;
 	border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	display: block;
-	width:35%;
+	/*width:35%;*/
 	text-align: center;
-	border:1px solid #459A00
+	text-decoration: none;
+	border:1px solid #1A87B9
 }
 
 a#manual-button {
@@ -134,12 +135,13 @@ a#manual-button {
 	padding:10px 15px;
 	color:#fff;
 	font-family:'Helvetica Neue',sans-serif;
-	font-size:16px;
+	font-size:20px;
 	border-radius:5px;
 	-moz-border-radius:5px;
 	-webkit-border-radius:5px;
 	display: block;
-	width:35%;
+	/*width:35%;*/
 	text-align: center;
+	text-decoration: none;
 	border:1px solid #459A00
 }
