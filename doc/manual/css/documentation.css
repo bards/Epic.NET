@@ -1,0 +1,69 @@
+div.toc {clear:both}
+.toc ul {
+	letter-spacing:3px;
+	float:right;
+	padding-bottom: 30px;
+	background-color: #ffffff;
+	z-index:0;
+	width : 20%;
+	list-style: none;
+	display:block;
+}
+.toc ul li {
+	display: inline;
+	padding: 0;
+}
+.toc ul a {
+    color:blue;
+	display : block;
+	border-left: 1px solid white;
+	border-bottom: 1px solid white;
+	text-decoration: none;
+	padding:5px;
+	padding-left:20px;
+}
+.toc ul a:hover {
+	display : block;
+	border-left: 1px solid gray;
+	border-bottom: 1px solid gray;
+	text-decoration: none;
+	padding:5px;
+	padding-left:20px;
+}
+.toc ul ul {
+    width: auto;
+    padding-bottom:0px;
+    float: none;
+}
+.toc ul span.section {
+    display: block; 
+    clear: both;
+}
+
+.toc a.toc-title {color:#800000}
+
+
+p.toc-title {display:none}
+div.blockquote { width:70% }
+
+
+div.book {padding-top:80px}
+.book p.toc-title, .part p.toc-title{display:block;padding-left:20px}
+.book .toc ul, .part .toc ul {width: auto; float:none;padding-left:0px}
+.book .toc ul ul, .part .toc ul ul {width: auto; float:none;padding-left:30px}
+.navfooter {padding-top:30px;letter-spacing:3px;}
+.navfooter hr {display:none}
+.book a.toc-title, .part a.toc-title {color:black;border:0px}
+.book a.toc-title:hover, .part a.toc-title:hover {color:black;border:0px}
+.book a.toc-title:visited, .part a.toc-title:visited {color:black;border:0px}
+
+div.warning, div.tip {padding-top: 10px; padding-bottom:10px;}
+div.warning table, div.tip table {border-left: 3px solid #DDD;}
+div.warning td, div.tip td {padding-right:10px;}
+div.warning img, div.tip img {padding:5px;vertical-align:middle}
+
+code.literal {background-color: #EEE;}
+em.citetitle {display:block;color:navy}
+
+div.variablelist span.term {color:navy}
+div.variablelist div.itemizedlist {padding-bottom:1.1em}

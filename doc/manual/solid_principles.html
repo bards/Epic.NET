@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Chapter 6. SOLID Principles</title><link rel="stylesheet" type="text/css" href="css/layout.css" /><link rel="stylesheet" type="text/css" href="css/screen.css" /><link rel="stylesheet" type="text/css" href="css/shCore.css" /><link rel="stylesheet" type="text/css" href="css/shCoreDefault.css" /><link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" /><link rel="stylesheet" type="text/css" href="css/documentation.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.77.1" /><link rel="home" href="manual.html" title="Dominant Domains" /><link rel="up" href="a_shared_modeling_grammar.html" title="Part I. Toward a shared modeling grammar" /><link rel="prev" href="observable_entities.html" title="Chapter 5. Observable Entities" /><link rel="next" href="repositories.html" title="Chapter 7. Repositories" /><meta charset="utf-8" /><link rel="icon" href="/favicon.ico" /><script src="script/shCore.js" type="text/javascript"></script><script src="script/shBrushCSharp.js" type="text/javascript"></script><link rel="alternate" type="application/atom+xml" title="Development log" href="/atom.xml" /><!--[if !IE 7]>
+    <style type="text/css">
+		#wrap {display:table;height:100%}
+	</style>
+  <![endif]--><!--[if lt IE 8]>
+    <style type="text/css">
+        #header {padding-top: 9px}
+    </style>
+  <![endif]--><!--[if IE 8]>
+    <style type="text/css">
+		#wrap {width:100%}
+	</style>
+  <![endif]--><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23846269-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body><div id="wrap"><div id="header"><a href="https://github.com/bards/Epic.NET"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><a class="title" href="/">Epic</a><span>dominant domains</span></div><div id="main"><div id="content"><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="solid_principles"></a>Chapter 6. SOLID Principles</h2></div></div></div><div class="toc"><ul><li><a href="/doc/manual.html" class="toc-title">Table of Contents</a></li><li><span class="section"><a href="solid_principles.html#about_single_responsibility">Single Responsibility</a></span></li><li><span class="section"><a href="solid_principles.html#about_open_closed">Open-Closed</a></span></li><li><span class="section"><a href="solid_principles.html#about_liskov_substitution">Liskov Substitution</a></span></li><li><span class="section"><a href="solid_principles.html#about_interface_segregation">Interface Segregation</a></span></li><li><span class="section"><a href="solid_principles.html#about_dependency_inversion">Dependency Inversion</a></span></li></ul></div><p>We all know the principles introduced by Robert C. Martin in the early 2000s.
+They are milestones in the evolution of OOP and they are still valid ten years
+later.</p><p>However, when applied to a domain model, they need some small adjustments
+based upon the unfortunate experiences of a few experienced developers facing
+to their first domain model.</p><div class="caution" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p>We do not pretend to talk out each principle, as Martin’s books are a
+must read for developers using Epic.</p></td></tr></table></div><p>We heartily recommend the principles described, as they will increase the
+stability of your models, improving their quality even from a design point
+of view.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_single_responsibility"></a>Single Responsibility</h2></div></div></div><div class="blockquote"><table border="0" class="blockquote" style="width: 100%; cellspacing: 0; cellpadding: 0;" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>A class should have only <span class="strong"><strong>one</strong></span> reason to change.</p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
+Robert C. Martin
+<em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
+</span></td></tr></table></div><p>In the context of the SRP, Martin defines a responsibility to be "a reason for
+change". He states that if you can think of more than one motive for changing a
+class, than that class has more than one responsibility.
+However, whenever no change actually occur, separating responsibility could
+smell of needless complexity.</p><p>In a domain model rightly partitioned in contexts, there are only tree
+legitimate reasons for change:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+business evolution,
+</li><li class="listitem">
+deeper insight,
+</li><li class="listitem">
+bug fixes.
+</li></ul></div><p>Since all profitable enterprises evolve, the models that capture their
+processes will need to be updated. This kind of changes can not be anticipated
+and they affect almost everything in an application built with Epic. <br />
+The good news is that the customer acknowledges about the change he is
+asking for and he is willing to pay. <a href="#ftn.id741234" class="footnote"><sup class="footnote"><a id="id741234"></a>[5]</sup></a></p><p>Whenever you get a deeper insight into a domain, you are in a economical
+dilemma: should we change the code or not? And why? Just to clarify the
+model’s expression through the code? <br />
+Finding the right answer to these questions is hard and should be done
+carefully. You should consider factors like the complexity of the new model and
+of the previous one, the time available, the long term cost of postponing the
+refactoring (a cost always undervalued, that slowly increases each day),
+the cost of all workarounds that you’ll have to implement without the new
+model and so on. <br />
+My own, personal, opinion is that most of times the refactoring should be
+planned with the customer. If it’s not a trivial task, you should never hide to
+the customer the problems emerged with the previous model.</p><p>Finally, as there’s no software without bug, all fixes will force you to modify
+the model. This could seem quite obvious, but it has a nasty side effect: you
+could introduce new subtle untracked bugs.
+Unit tests' code coverage could reduce the risks but can not eliminate them.
+<a href="#ftn.id741250" class="footnote"><sup class="footnote"><a id="id741250"></a>[6]</sup></a>
+Fortunatly, since no bug should relate to contracts (or it will lead you to a
+far more expensive refactoring toward a deeper insight), all the code depending
+on the broken component don’t even need to be recompiled. Indeed, one of the
+reason that led us to introduce a thin layer of pure interfaces around the
+domain model implementation was the evaluation of the deploy’s costs of bug
+fixes. With such interfaces, we can minimize the number of layers affected by a
+bug in the domain, reducing the system stops and the loss for our customer.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_open_closed"></a>Open-Closed</h2></div></div></div><div class="blockquote"><table border="0" class="blockquote" style="width: 100%; cellspacing: 0; cellpadding: 0;" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>Software entities (classes, modules, functions, etc.) should be open for
+extension, but closed for modification.</p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
+Robert C. Martin
+<em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
+</span></td></tr></table></div><p>The golden unachievable ideal of OCP would allow to change a system behaviour
+by adding new code, not by changing old code that already works. <br />
+This would lead to an easy versioning, as each new version would be backward
+compatible.</p><p>Well defined <span class="strong"><strong>contexts</strong></span> are the first tool for approaching that ideal. Indeed
+when you define small contexts, you reduce the probability of changes in
+any single one. Moreover, if the business rules are the only force that drives
+your design, the code will be as stable as that rules.</p><p>For example, if your software handles vineyards and your customer buys a new
+wheat field, you can sell him a new context instead of adding new classes to
+the previous one.</p><p>To further keep the model closed to modification you could take cheap design
+decisions that do not smell of needless complexity. For example, since our
+models run in different technological environments (ASP.NET pages, data loaders,
+web services and WinForm applications) we choosed to mark all the classes
+belonging to the domain model with the <code class="literal">SerializableAttribute</code>. Moreover,
+when we got the first customer that required realtime synchronization
+between different applications running the same domain, we designed the
+Single Mutable State pattern (that we adopted massively from then on).</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p>Feel free to violate the OCP of modules only when the business evolves and
+you can’t simply add a new context.</p></td></tr></table></div><p>The interface layer that surrounds the model allows a limited flexibility to
+the code but whenever either the business changes or you get a deeper insight
+of the context you will have to break the OCP, with a new version of the code.</p><p>Template methods are useful when the modelers already know that a domain entity
+will have some specializations that do not violate the LSP. However you should
+never leave a class unsealed just to keep an open door behind.</p><p>The good news is that technological changes will not affect the model itself:
+you can replace Epic without any model’s recompilation.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_liskov_substitution"></a>Liskov Substitution</h2></div></div></div><div class="blockquote"><table border="0" class="blockquote" style="width: 100%; cellspacing: 0; cellpadding: 0;" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>Subtypes must be substitutable for their base types.</p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
+Robert C. Martin
+<em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
+</span></td></tr></table></div><p>We’ve already said that no modeler should introduce in the model’s abstractions
+ignored by the domain experts, since they lead to smell of rigidity and long
+term bugs.</p><p>We value the LSP a lot, since we had some very expensive experiences with its
+violations. While the principle heavily reduces the applicability of
+object-oriented inheritance, it avoids the infamous yo-yo problem: bug fixes
+are cheaper, if you can rapidly understand the model’s code.</p><p>We learnt that apply this principle to the domain-driven design, we need that
+no entity is abstracted beyond its own identifier: all the entities in a
+hierarchy must share the same kind of identifiers. For example, all type
+of securities can be identified by their ISIN (or their RIC, or so).<br />
+Though we see an evident abstraction between two types, we avoid it’s
+introduction until the domain expert give us the green light. Moreover he has
+to explain us <span class="strong"><strong>how</strong></span> the abstraction is useful in the context.</p><p>Value objects abstractions follow the same rule, but do not have any constraint
+related to identifiers, of course. For example, we never needed to introduce a
+quantity abstraction.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_interface_segregation"></a>Interface Segregation</h2></div></div></div><div class="blockquote"><table border="0" class="blockquote" style="width: 100%; cellspacing: 0; cellpadding: 0;" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><p>Clients should not be forced to depend on methods that they do not use.</p></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
+Robert C. Martin
+<em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
+</span></td></tr></table></div><p>The simple definition that Martin provides for ISP give us a big advise: the
+definition of the context’s boundary is a fundamental step in the domain-driven
+development process. Indeed, small contexts contain well defined contracts
+that lead to small classes.</p><p>Shared kernels are another marvelous tool to enforce interface segregation:
+for example they contain base contracts shared between different contexts.</p><p>In the idiomatic DDDSample provided with the Epic source code, you
+can see how the <code class="literal">IVoyage</code> violate the ISP: it has query methods used from a
+<code class="literal">ILongshoreman</code> when loading cargos into each voyage, and
+commands for user impersonating an <code class="literal">IPortAuthority</code>.<br />
+To enforce the interface segregation, we could write a shared kernel
+containing at least <code class="literal">VoyageNumber</code>, <code class="literal">UnLocode</code> and an +IVoyage like this:</p><script type="syntaxhighlighter" class="brush: csharp">namespace Sample.Cargo.Kernel
+{
+    /// &lt;summary&gt;
+    /// A Voyage.
+    /// &lt;/summary&gt;
+    public interface IVoyage
+    {
+        /// &lt;summary&gt;
+        /// Voyage identification number.
+        /// &lt;/summary&gt;
+        VoyageNumber Number { get; }
+
+        /// &lt;summary&gt;
+        /// True if the voyage is moving toward the next arrival.
+        /// &lt;/summary&gt;
+        bool IsMoving { get; }
+
+        /// &lt;summary&gt;
+        /// Last known location.
+        /// &lt;/summary&gt;
+        UnLocode LastKnownLocation { get; }
+    }
+}</script><p>With such a kernel, the <code class="literal">ICargo</code> interface would have taken this interface
+instead of the bigger <code class="literal">Challenge00.DDDSample.Voyage.IVoyage</code>.</p><p>However in this case, we had two good reason to violate the ISP:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+<code class="literal">IVoyage</code> and <code class="literal">ICargo</code> are in the same assembly and share the same fate;
+</li><li class="listitem">
+The hypothetical customer (A.C.M.E.) do not seem interessed into a software
+  to manage ships, planes or freight train (that would lead to a different
+  <code class="literal">IVoyage</code> in a new context);
+</li><li class="listitem">
+We need two roles with different permissions over the same class to show the
+  Epic.Security system.
+</li></ul></div><p>However in our financial domains we have a substantial shared kernel full of
+such kind of interfaces and shared identifiers.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_dependency_inversion"></a>Dependency Inversion</h2></div></div></div><div class="blockquote"><table border="0" class="blockquote" style="width: 100%; cellspacing: 0; cellpadding: 0;" summary="Block quote"><tr><td width="10%" valign="top"> </td><td width="80%" valign="top"><div class="orderedlist"><ol class="orderedlist" type="a"><li class="listitem">
+High-level modules should not depend on low-level modules.
+   Both should depend on abstractions.
+</li><li class="listitem">
+Abstractions should not depend on details.
+   Details should depend on abstractions.
+</li></ol></div></td><td width="10%" valign="top"> </td></tr><tr><td width="10%" valign="top"> </td><td colspan="2" align="right" valign="top">--<span class="attribution">
+Robert C. Martin
+<em class="citetitle">Agile Software Development, Principles, Patterns, and Practices (2002)</em>
+</span></td></tr></table></div><p>The dependency inversion is probably the most valuable feature that Epic
+provides in a domain-driven application. Indeed it is designed to allow a new,
+extreme, unexplored dependency inversion between the application and the
+domain model.<br />
+Instead of a domain model that depends on a framework, we build a framework
+designed to depend on the domain itself, adapting the architecture to
+the business of the customer.</p><p>In Epic, the highest level module is the domain model. It does not depend on
+anything else that interfaces belonging to the model itself. <span class="emphasis"><em>(a)</em></span></p><p>Low-level modules as user interface, databases, logging, web services,
+statistical reports, service bus and so on, always depend on the
+<span class="strong"><strong>domain model’s interfaces</strong></span>. <span class="emphasis"><em>(b)</em></span></p><p>Epic itself is a low-level module, when compared with the domain.
+It works like an adapter and a manager serving the other modules, but you could
+replace it with the next wonderful tecnology without affecting any existing
+models.</p><p>In the introduction to the second part of this manual, the DIP will be further
+analyzed in the context of the Epic’s architecture.</p></div><div class="footnotes"><br /><hr style="width:100; align:left;" /><div id="ftn.id741234" class="footnote"><p><a href="#id741234" class="simpara"><sup class="simpara">[5] </sup></a>How will be explained into
+the third part of the book, in such a case you should consider whether to
+write a new bounded context or modify the current one.
+The number of production environments running the current code could be a
+persuasive argument in one sense or another.</p></div><div id="ftn.id741250" class="footnote"><p><a href="#id741250" class="simpara"><sup class="simpara">[6] </sup></a>I think that the domain model implementation should take pride in a
+full code coverage (100%). This seems expensive at first, when you are at 97%
+and you can’t find a way to test those dirty three lines.
+However, a full code coverage will force you to read your code over and over
+again, drastically improving the quality of the implementation itself.
+The ROI of such kind of revision is often bigger than that of the tests
+themselves as safety net.</p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="observable_entities.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="repositories.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 5. Observable Entities </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 7. Repositories</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2012 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>

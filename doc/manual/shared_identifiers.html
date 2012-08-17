@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Chapter 3. Shared Identifiers</title><link rel="stylesheet" type="text/css" href="css/layout.css" /><link rel="stylesheet" type="text/css" href="css/screen.css" /><link rel="stylesheet" type="text/css" href="css/shCore.css" /><link rel="stylesheet" type="text/css" href="css/shCoreDefault.css" /><link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" /><link rel="stylesheet" type="text/css" href="css/documentation.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.77.1" /><link rel="home" href="manual.html" title="Dominant Domains" /><link rel="up" href="a_shared_modeling_grammar.html" title="Part I. Toward a shared modeling grammar" /><link rel="prev" href="bounded_roles.html" title="Chapter 2. Bounded Roles" /><link rel="next" href="command_query_separation.html" title="Chapter 4. Command - Query separation" /><meta charset="utf-8" /><link rel="icon" href="/favicon.ico" /><script src="script/shCore.js" type="text/javascript"></script><script src="script/shBrushCSharp.js" type="text/javascript"></script><link rel="alternate" type="application/atom+xml" title="Development log" href="/atom.xml" /><!--[if !IE 7]>
+    <style type="text/css">
+		#wrap {display:table;height:100%}
+	</style>
+  <![endif]--><!--[if lt IE 8]>
+    <style type="text/css">
+        #header {padding-top: 9px}
+    </style>
+  <![endif]--><!--[if IE 8]>
+    <style type="text/css">
+		#wrap {width:100%}
+	</style>
+  <![endif]--><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23846269-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body><div id="wrap"><div id="header"><a href="https://github.com/bards/Epic.NET"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><a class="title" href="/">Epic</a><span>dominant domains</span></div><div id="main"><div id="content"><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="shared_identifiers"></a>Chapter 3. Shared Identifiers</h2></div></div></div><div class="toc"><ul><li><a href="/doc/manual.html" class="toc-title">Table of Contents</a></li><li><span class="section"><a href="shared_identifiers.html#about_you_can_share_what_you_have">You can share what you have</a></span></li><li><span class="section"><a href="shared_identifiers.html#about_avoid_naming_conventions">Avoid naming conventions</a></span></li><li><span class="section"><a href="shared_identifiers.html#about_cheap_placeholders">Cheap placeholders</a></span></li><li><span class="section"><a href="shared_identifiers.html#about_decoupling_entities">Decoupling entities</a></span></li><li><span class="section"><a href="shared_identifiers.html#about_decoupling_contexts">Decoupling contexts</a></span></li><li><span class="section"><a href="shared_identifiers.html#about_coding_conventions">Coding conventions</a></span></li></ul></div><p>I am Giacomo Tesio. "Giacomo Tesio" represents a convention to call me.</p><p>It’s just a string, an expression that human beings can tell, write or type.</p><p>There are a lot of identifiers pointing to me: tax code, vat code and even
+babblings like "papo" <a href="#ftn.id740332" class="footnote"><sup class="footnote"><a id="id740332"></a>[3]</sup></a> as
+my lovely doughter used to call me when she was six month old.</p><p>As you know, identifiers are key concepts in domain driven design.</p><p>Most of newcomers thinks that identifiers are just used to identify.</p><p>They are not. They are first class citizen in the ubiquitous language.
+They serve to comunicate.</p><p>All people that develop, use or maintain a domain model <span class="strong"><strong>must share</strong></span> the
+identifiers, or the language will loose its ubiquitousness.</p><p>No matter how fast are integer indices in a database, to identify an entity
+you <span class="strong"><strong>must</strong></span> use an identifier that the users know.</p><p>In the sample domain model of cargo shipping, we used <code class="literal">TrakingId</code> to identify a
+cargos, <code class="literal">UnLocode</code> to identify locations and <code class="literal">VoyageNumber</code> to identify a voyage.
+<code class="literal">UnLocode</code> was the only one requiring strong business rules that we embedded in
+its constructor.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_you_can_share_what_you_have"></a>You can share what you have</h2></div></div></div><p>To share something you need to own it.</p><p>Owning an identifier means to be able to express it in the domain model.
+Thus you should always model identifiers with dedicated classes.</p><p>Identifiers are contracts by definition, so they do not need to be interfaces.</p><p>Moreover they are immutable since mutability would damage their use.</p><p>This makes strings and integers a sweet temptation to avoid. The reason is
+simple you can’t sum two identifiers and most of times you can’t get an
+identifier from another.</p><p>So you have to design entities' identifiers as custom value objects.
+When they follow business rules (like ISBN-13) you should put them in their
+code. Moreover you should make them sealed to avoid dirty temptations that
+could lead you to a bloodbath.</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p><code class="literal">ISBN</code> is an interesting identifier: for a bookshop ISBNs are the main
+candidates to identify books, but what about a library?
+Library’s employees distinguish between different copies of the same book, so
+that an ISBN is not enough. Nevertheless, public catalogs use
+ISBN to allow library’s users to find what they need.</p><p>So what?</p><p>This is a simple case of identifiers shared in different contexts:
+both users and employees understand ISBNs when looking for a copy of a book,
+but when an employee lends you a book, he logs the individual copy’s location
+through its registration code.</p><p>In this situation we would have two classes for identify books: <code class="literal">ISBN</code> for the
+<code class="literal">LibraryUser</code> role and <code class="literal">RegistrationCode</code> for the <code class="literal">LibraryEmployee</code> one.</p></td></tr></table></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_avoid_naming_conventions"></a>Avoid naming conventions</h2></div></div></div><p>Each type of entity has it’s own identifier.</p><p>If the entity is not "syntetic" (like a web resource, for example) such
+identifiers is a property of the entity itself.</p><p>Name such property after its meaning, avoiding naming conventions.</p><p>For example, if you are modeling a network device, you could use its own <code class="literal">IP</code>.
+Please do not use a property named <code class="literal">Identifier</code>!</p><p>You might wonder why. There are at least two reasons:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+client code will lose maintainability since each line of code will require
+  more context to be understood,
+</li><li class="listitem">
+different customers could require to identify differently the same entities.
+  Think about the different security identifiers in capital markets: ISIN,
+  CUSIP, SEDOL, RIC but also the various national security identifiers.
+</li></ul></div><p>Sometimes you can safely choose a property as being the true entity identifier,
+but often you can not, so we suggest to avoid the spoilt for choice.</p><div class="tip" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Tip"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Tip]" src="images/tip.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p>Epic does not provide any interface or attribute for entities and
+their identifiers. Client code will choose how to identify each entity.</p></td></tr></table></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_cheap_placeholders"></a>Cheap placeholders</h2></div></div></div><p>Think about a web URI.</p><p>You can type it, you can write it down, you can put it in your wallet and so on.
+Carrying an URI is far easier than carrying the resource!</p><p>Otherwise, getting the resource is cheap as long as you have access to the web
+(and you are allowed to get it).</p><p>The web works like a cheap repository.</p><p>URIs are just specialized identifiers, but the same is true
+to any other kind of identifier: whenever you have access to a repository, you
+can always get entities in return for identifiers.</p><p>This means that often you can replace an entity with its identifier.</p><div class="caution" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p>Such replacement works very well in contexts where an entity can be
+identified by just one property.
+Otherwise you could choose one identifying property of convenience: for example
+you could choose RIC to point to financial instruments. An alternative
+would be a complex use of generics, delegates and abstractions in dependant code.
+This proved to be feasible, but rather expensive.      <br />
+If you find yourself identifying an entity by two different properties,
+chances are that you need a new exploration whirpool: may be you need to define
+two different entities.</p></td></tr></table></div><p>If you model the user of a library, for example, such <code class="literal">LibraryUser</code> do not need
+to keep a reference to all the lent books: their <code class="literal">ReferenceCode</code> are enough.</p><p>It might seem a bit "relational", but it’s not: <code class="literal">LibraryUser</code>'s methods
+like <code class="literal">Lend()</code> or <code class="literal">Return()</code> should not accept identifiers, just books.
+Only the <code class="literal">ReadingBooks</code> property should be an enumerable of <code class="literal">ReferenceCodes</code>.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_decoupling_entities"></a>Decoupling entities</h2></div></div></div><p>Given such cheap placeholders, you can avoid to keep an entity in the state of
+another one (whenever they do not share the same livecycle).</p><p>This way you will have decoupled classes and smaller and fewer aggregate roots.</p><p>In the classic Northwind Linq sample, the customer class gives you the set of
+his orders. Direct references seem cool at first, but with complex domains they
+could become a pain when you get deeper insights.</p><p>We noted that reference by identifiers works as well but it allow the various
+entities to keep immutable state only.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_decoupling_contexts"></a>Decoupling contexts</h2></div></div></div><p>Identifiers are typical components of shared kernels.</p><p>We found convenient to keep their classes along with base interfaces for
+entities. For example the MIC class could be in a financial kernel along
+with a simple (almost empty) <code class="literal">IMarket</code> interface like this:</p><script type="syntaxhighlighter" class="brush: csharp">namespace Sample.Financial.Kernel
+{
+    /// &lt;summary&gt;
+    /// Shared interface for exchanges, trading platforms and regulated or
+    /// non-regulated markets as sources of prices and related information.
+    /// &lt;/summary&gt;
+    public interface IMarket
+    {
+        /// &lt;summary&gt;
+        /// Market Identifier Code as defined by ISO 10383
+        /// &lt;/summary&gt;
+        /// &lt;seealso cref="http://www.iso15022.org/MIC/ISO10383_MIC_v1_83b.pdf"/&gt;
+        MIC Identifier { get; }
+    }
+}</script><p>Different "bounded roles" will access different views of the market concept,
+each specialized for the target context.
+But it will be really easy to move from a context to another: you have a
+simple and effective anti-corruption layer for free!</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_coding_conventions"></a>Coding conventions</h2></div></div></div><p>A few coding conventions and best practices derive from the role that
+identifiers play in the ubiquitous language:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+identifiers are public, concrete contracts (they do not need to have
+  interfaces and should have public constructors);
+</li><li class="listitem">
+identifiers must override <code class="literal">ToString()</code>;
+</li><li class="listitem">
+identifiers of the same type must be IEquatable among themselves;
+</li><li class="listitem">
+identifiers must be usable as keys (thus you must override both
+  <code class="literal">Equals(object)</code> and <code class="literal">GetHashCode()</code>);
+</li><li class="listitem">
+it should be possible to get an identifier from a string (a public
+  constructor able to parse a string would be enough);
+</li><li class="listitem">
+it would be kind for clients to define the <code class="literal">==</code> and the <code class="literal">!=</code> operators for
+  them;
+</li><li class="listitem">
+formally defined identifiers (like MIC, ISBN or ISIN) should be sealed.
+</li></ul></div><p>Such rules have proved to work very well, and they are rather easy to be
+followed. Currently, Epic does not provide a base class for identifiers since
+we do not want that your domain model depends on Epic itself.
+However writing such a base class should be quite easy, as you can see in the
+<code class="literal">StringIdentifier&lt;TIdentifier&gt;</code> class provided with the cargo sample.</p></div><div class="footnotes"><br /><hr style="width:100; align:left;" /><div id="ftn.id740332" class="footnote"><p><a href="#id740332" class="simpara"><sup class="simpara">[3] </sup></a>Something like "daddee", in italian.</p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="bounded_roles.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="command_query_separation.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 2. Bounded Roles </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 4. Command - Query separation</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2012 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Chapter 7. Repositories</title><link rel="stylesheet" type="text/css" href="css/layout.css" /><link rel="stylesheet" type="text/css" href="css/screen.css" /><link rel="stylesheet" type="text/css" href="css/shCore.css" /><link rel="stylesheet" type="text/css" href="css/shCoreDefault.css" /><link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" /><link rel="stylesheet" type="text/css" href="css/documentation.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.77.1" /><link rel="home" href="manual.html" title="Dominant Domains" /><link rel="up" href="a_shared_modeling_grammar.html" title="Part I. Toward a shared modeling grammar" /><link rel="prev" href="solid_principles.html" title="Chapter 6. SOLID Principles" /><link rel="next" href="single_mutable_state.html" title="Chapter 8. Single Mutable State" /><meta charset="utf-8" /><link rel="icon" href="/favicon.ico" /><script src="script/shCore.js" type="text/javascript"></script><script src="script/shBrushCSharp.js" type="text/javascript"></script><link rel="alternate" type="application/atom+xml" title="Development log" href="/atom.xml" /><!--[if !IE 7]>
+    <style type="text/css">
+		#wrap {display:table;height:100%}
+	</style>
+  <![endif]--><!--[if lt IE 8]>
+    <style type="text/css">
+        #header {padding-top: 9px}
+    </style>
+  <![endif]--><!--[if IE 8]>
+    <style type="text/css">
+		#wrap {width:100%}
+	</style>
+  <![endif]--><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23846269-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body><div id="wrap"><div id="header"><a href="https://github.com/bards/Epic.NET"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><a class="title" href="/">Epic</a><span>dominant domains</span></div><div id="main"><div id="content"><div class="chapter"><div class="titlepage"><div><div><h2 class="title"><a id="repositories"></a>Chapter 7. Repositories</h2></div></div></div><div class="toc"><ul><li><a href="/doc/manual.html" class="toc-title">Table of Contents</a></li><li><span class="section"><a href="repositories.html#about_generic_repositories">Generic repositories</a></span></li><li><span class="section"><a href="repositories.html#about_custom_repositories">Custom repositories</a></span></li><li><span class="section"><a href="repositories.html#about_enter_linq">Enter Linq</a></span></li><li><span class="section"><a href="repositories.html#about_commands_as_implementation_details">Commands as implementation details</a></span></li><li><span class="section"><a href="repositories.html#about_explicit_explicit_explicit">Explicit, explicit, explicit</a></span></li></ul></div><p>A repository is a well-known global interface that encapsulates retrieval and
+search behavior emulating a collection of objects. We want to decouple the
+client code from the persistence layer: the respository works like a
+façade to the persistance infrastructure and the client itself.</p><p>There are two mainstream strategies for repository’s implementation, each with
+pros and cons: generic repositories and custom ones.</p><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_generic_repositories"></a>Generic repositories</h2></div></div></div><p>Generic repositories follow the path tracked from O/RM tools like Hibernate,
+Entity Framework and so on. They often expose commands like <code class="literal">Save&lt;T&gt;(T)</code>,
+<code class="literal">Remove&lt;T&gt;(T)</code> and queries like <code class="literal">Select&lt;T&gt;(AbstractQueryObject)</code> and
+<code class="literal">GetFromIdentity&lt;T&gt;(long)</code>, providing a consistent API for both storage and
+retrieving. Such APIs are often easy to implement with any well known O/RM out
+of there (once you stoop to compromises with the tool itself).
+However, away back in 2009, Greg Young noted that the approach does not add
+much value for the application itself, while it causes further issues.</p><p>To my money, the approach suffer of both <span class="strong"><strong>implicitness</strong></span> and over-abstraction:
+out-of-bounds comunication are needed for business rule such as "a customer can
+not be deleted" or "you can search bonds by rating". Clients are coupled with
+implementation details behind the scenes, so that they can be changed
+indipendently without recompilation but they break at runtime.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_custom_repositories"></a>Custom repositories</h2></div></div></div><p>Custom repositories provide specialized interfaces for each aggregate root with
+methods like <code class="literal">GetCustomer(VatCode)</code> and <code class="literal">GetBonds(Rating)</code> : they are <span class="strong"><strong>explicit</strong></span>
+contracts and that the clients will have to know. They can expose commands
+tailored to the aggregate root, minimizing the need for out-of-bounds
+comunications.</p><p>If Epic was written in Java, this would be the preferred approach.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_enter_linq"></a>Enter Linq</h2></div></div></div><p>Language Integrated Query (or Monads, as you like) has been one of the reason
+that made us to choose C# for modeling. It provides a generic, strongly typed
+and language integrated method that gives us the best of both approaches: we
+can derive <code class="literal">IQueryable&lt;T&gt;</code> adding specific queries that can not be expressed in
+term of object properties, but we can still search in a generic way without
+coupling client the implementation.</p><p>Indeed, the base interface for Epic repositories is apparently simple:</p><script type="syntaxhighlighter" class="brush: csharp">using System;
+using System.Linq;
+
+namespace Epic
+{
+        /// &lt;summary&gt;
+        /// Repository base interface.
+        /// &lt;/summary&gt;
+        /// &lt;remarks&gt;
+        /// &lt;para&gt;
+        /// This is the base interface for repositories, in Epic.
+        /// &lt;/para&gt;
+        /// &lt;para&gt;
+        /// It express the only feature that all repository should expose: queryability.
+        /// &lt;/para&gt;
+        /// &lt;/remarks&gt;
+        /// &lt;typeparam name="TEntity"&gt;Accessible entity.&lt;/typeparam&gt;
+        /// &lt;typeparam name="TIdentity"&gt;&lt;typeparamref name="TEntity"/&gt;'s identifier.&lt;/typeparam&gt;
+        public interface IRepository&lt;TEntity, TIdentity&gt; : IQueryable&lt;TEntity&gt;
+                where TEntity : class
+                where TIdentity : IEquatable&lt;TIdentity&gt;
+        {
+                /// &lt;summary&gt;
+                /// Gets the &lt;typeparamref name="TEntity"/&gt; identified by &lt;paramref name="identity"/&gt;.
+                /// &lt;/summary&gt;
+                /// &lt;param name='identity'&gt;
+                /// &lt;typeparamref name="TEntity"/&gt;'s identifier.
+                /// &lt;/param&gt;
+                TEntity this[TIdentity identity] { get; }
+        }
+}</script><p>As you can see in the sample code, Epic does not require that repositories
+implement such interface (<code class="literal">IQueryable&lt;TEntity&gt;</code> could be enough for the client),
+but <code class="literal">IRepository&lt;TEntity, TIdentity&gt;</code> expresses  the vision we have on the
+subject:</p><div class="itemizedlist"><ul class="itemizedlist" style="list-style-type: disc; "><li class="listitem">
+only entities can be aggregate roots;
+</li><li class="listitem">
+no base interface is required to connect the entity and its own identifier;
+</li><li class="listitem">
+no command method should be exposed by the repository;
+</li><li class="listitem">
+all repositories should be queryable.
+</li></ul></div></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_commands_as_implementation_details"></a>Commands as implementation details</h2></div></div></div><p>Most of repositories you will encounter out of there, provide methods as
+<code class="literal">Add(Entity)</code> or <code class="literal">Delete(Entity)</code>.</p><p>In Epic based applications, instead, no
+repository should provide such methods, as they are always owned by a bounded
+role. Indeed there is always a user responsible for the creation or the
+elimination of an entity.</p><p>The persistence of a modified entity, however, should not correspond to any
+command at all: entities should be updated on the database (or wherever they
+are) automatically, thanks to the repository that observes exposed events.</p><p>In Epic.Linq you will find the repository’s base class, that will provide
+methods to add and remove new entities from the identity map and tools to
+observe the changes. However, such methods will be designed for the
+implementation of the bounded roles, only.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_explicit_explicit_explicit"></a>Explicit, explicit, explicit</h2></div></div></div><p>If you choose to use the <code class="literal">IRepository&lt;TEntity, TIdentity&gt;</code> interface, do not
+forget to derive your own: even if you do not add any query method to the
+contract, it is always better to define a specialized interface to maximize
+the forward compatibility of the code.</p><p>This will make the client code more explicitly coupled with the repository
+itself and you will be able to add query methods to the repository without
+issues related to assembly’s versioning.</p></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="solid_principles.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="single_mutable_state.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 6. SOLID Principles </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 8. Single Mutable State</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2012 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>
