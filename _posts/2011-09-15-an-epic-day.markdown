@@ -1,6 +1,7 @@
 ---
 layout: post
 title: An Epic day
+public: true
 ---
 I'm glad to announce that the Epic project will be presented to the 
 [first italian conference on Domain Driven Design][1], on 8 october in Bologne.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Is Epic wrong?
+public: true
 ---
 <a name="detail-fn-back"></a>
 During the latest Greg's session at the DDD Day I candidly stated that

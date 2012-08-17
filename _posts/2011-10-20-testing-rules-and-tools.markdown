@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Testing rules (and tools)
+public: true
 ---
 Epic has received some interest in the last weeks (probably becouse 
 of the [pending bet with Greg Young][bet]). 

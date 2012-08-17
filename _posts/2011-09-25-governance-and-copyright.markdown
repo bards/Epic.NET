@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Governance and Copyright
+public: true
 ---
 [Architecture][architecture] is the structure given to an artifact, 
 to meet all the paid requirements. 

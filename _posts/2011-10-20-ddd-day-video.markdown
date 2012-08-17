@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Epic @ DDD Day (video, it-IT)
+public: true
 ---
 Thanks to [DotNetMarche][dotnetm], you can see an impressive HD video with my 
 session at the DDD Day on development processes, modeling patterns and 

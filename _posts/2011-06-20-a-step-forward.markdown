@@ -1,6 +1,7 @@
 ---
 layout: post
 title: A step forward
+public: true
 ---
 After two months of hard work, I welcome the 0.2 release of Epic.
 

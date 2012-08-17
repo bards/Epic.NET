@@ -1,6 +1,7 @@
 ---
 layout: post
 title: DDD Day, the smartest question
+public: true
 ---
 Saturday, during the latest Greg's session, [Arialdo Martini][arialdo] asked a 
 very smart question.

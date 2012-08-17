@@ -4,12 +4,14 @@ title: Development log
 ---
 
 <div class="feed">
-<a href="atom.xml" title="Development feed" style="float:left"><img border="0" src="feed.png" /></a>
+<a href="/atom.xml" title="Development feed" style="float:left"><img border="0" src="/feed.png" /></a>
 <span>Follow the Epic's development on the <a href="atom.xml" title="Development feed">feed</a>.</span>
 </div>
 
 <ul class="posts">
 {% for post in site.posts %}
+{% if post.public %}
   <li><span>{{ post.date | date_to_string }}</span> &raquo; <a href="{{ post.url }}">{{ post.title }}</a></li>
+{% endif %}  
 {% endfor %}
 </ul>

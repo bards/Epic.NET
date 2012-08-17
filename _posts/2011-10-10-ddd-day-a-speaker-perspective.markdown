@@ -1,6 +1,7 @@
 ---
 layout: post
 title: DDD Day, a speaker's perspective
+public: true
 ---
 I thought a lot about what I listened [saturday at Bologna][ddd-day].
 (And yes, my spoken english sucks! What an embarassing situation! :-D)

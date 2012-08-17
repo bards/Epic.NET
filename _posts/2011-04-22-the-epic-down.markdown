@@ -1,6 +1,8 @@
 ---
 layout: post
 title: The Epic down
+public: true
+author: giacomo
 ---
 
 The first step on the [roadmap][1] has been done.

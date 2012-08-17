@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Epic.NET - Processes, patterns and architectures
+public: true
 ---
 Here is the **extended** version of the slides that I used at my speak on 
 saturday, at Bologna on [DDD-Day][ddd-day].

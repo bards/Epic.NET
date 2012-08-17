@@ -1,6 +1,7 @@
 ---
 layout: post
 title: How to contribute?
+public: true
 ---
 Epic is very complex. We need talented programmers with real world
 experience and high technical skills to complete the journey.

@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Software Architecture
+public: true
 ---
 Today I had an interesting meeting with five other different software 
 [architects][6]. It was the first of a series of meeting devoted to share the 

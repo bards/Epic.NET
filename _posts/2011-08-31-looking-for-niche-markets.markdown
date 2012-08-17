@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Looking for niche markets
+public: true
 ---
 I am very ambitious.
 

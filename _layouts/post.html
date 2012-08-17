@@ -5,7 +5,7 @@
 
   <title>Epic - dominant domains</title>
   <link rel="icon" href="/favicon.ico" />
-  <link rel="alternate" type="application/atom+xml" title="Development log"  href="atom.xml" />
+  <link rel="alternate" type="application/atom+xml" title="Development log"  href="/atom.xml" />
   <link rel="stylesheet" type="text/css" href="/layout.css" />
   <link rel="stylesheet" type="text/css" href="/screen.css" />
   <!--[if !IE 7]>
@@ -57,7 +57,14 @@
         </ul>
 
         <h1>{{ page.title }}</h1>
-        
+
+{% if page.author %}
+    {% assign author = site.authors[page.author] %}
+{% else %}
+    {% assign author = site.authors.giacomo %}
+{% endif %}
+  <span style="color: #314E64;">by <b>{{ author.display_name }}</b></span>
+
 {{ content }}
 
 <div id="disqus_thread"></div>

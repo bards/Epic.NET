@@ -12,20 +12,34 @@ layout: nil
   <author>
     <name>Giacomo Tesio</name>
     <email>giacomo@tesio.it</email>
+    <uri>http://www.tesio.it/</uri>
   </author>
 
   {% for post in site.posts %}
+  {% if post.public %}
+  {% if page.author %}
+    {% assign author = site.authors[page.author] %}
+  {% else %}
+    {% assign author = site.authors.giacomo %}
+  {% endif %}
+
   <entry>
     <id>http://epic.tesio.it{{ post.id }}</id>
     <link type="text/html" rel="alternate" href="http://epic.tesio.it{{ post.url }}"/>
     <title>{{ post.title }}</title>
     <updated>{{ post.date | date_to_xmlschema }}</updated>
     <author>
-        <name>Giacomo Tesio</name>
-        <email>giacomo@tesio.it</email>
+        <name>{{ author.name }}</name>
+        {% if author.email %}
+        <email>{{ author.email }}</email>
+        {% endif %}
+        {% if author.web %}
+        <uri>{{ author.web }}</uri>
+        {% endif %}
     </author>
     <content type="html">{{ post.content | xml_escape }}</content>
   </entry>
+  {% endif %}  
   {% endfor %}
  
 </feed>

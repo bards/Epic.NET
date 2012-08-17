@@ -1,6 +1,7 @@
 ---
 layout: post
 title: We are the Bards...
+public: true
 ---
 
 This is a small announcement to signal that we are still alive and we are 
