@@ -63,7 +63,7 @@
 {% else %}
     {% assign author = site.authors.giacomo %}
 {% endif %}
-  <span style="color: #314E64;">by <b>{{ author.display_name }}</b></span>
+  <span>{{ post.date | date_to_string }}</span>|<span style="color: #314E64;">{{ author.name }}</span>
 
 {{ content }}
 
