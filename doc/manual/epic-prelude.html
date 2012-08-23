@@ -63,20 +63,20 @@ change all the visitors.</p><p>To address this issue we developed the <span clas
 actually is just an acyclic visitor that replaces inheritance with composition.</p><p>The base interface for visitable objects is the
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_IVisitable.htm" target="_top">IVisitable</a> interface
 that defines the <a class="ulink" href="http://epic.tesio.it/doc/api/html/M_Epic_IVisitable_Accept__1.htm" target="_top">Accept</a>
-method. <a href="#ftn.id736185" class="footnote"><sup class="footnote"><a id="id736185"></a>[10]</sup></a></p><p>The first difference from the classical pattern is that Accept takes a
+method. <a href="#ftn.id726491" class="footnote"><sup class="footnote"><a id="id726491"></a>[10]</sup></a></p><p>The first difference from the classical pattern is that Accept takes a
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_IVisitor_1.htm" target="_top">visitor</a> and a
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_IVisitContext.htm" target="_top">context for the visit</a>
-decoupling the visitor from its mutable state. <a href="#ftn.id736209" class="footnote"><sup class="footnote"><a id="id736209"></a>[11]</sup></a></p><p>Moreover, the visitor take controls over it’s own cast to the specialized
-visitor type <a href="#ftn.id736217" class="footnote"><sup class="footnote"><a id="id736217"></a>[12]</sup></a> through
+decoupling the visitor from its mutable state. <a href="#ftn.id726515" class="footnote"><sup class="footnote"><a id="id726515"></a>[11]</sup></a></p><p>Moreover, the visitor take controls over it’s own cast to the specialized
+visitor type <a href="#ftn.id726522" class="footnote"><sup class="footnote"><a id="id726522"></a>[12]</sup></a> through
 the method <a class="ulink" href="http://epic.tesio.it/doc/api/html/M_Epic_IVisitor_1_GetVisitor__1.htm" target="_top">GetVisitor&lt;TExpression&gt;</a>.</p><p>Thus, when the visitor is an instance of a class that extends the
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_CompositeVisitorBase_2.htm" target="_top">CompositeVisitorBase&lt;TResult, TExpression&gt;</a>
 abstract class, the composition will be able to returns a specialized visitor
-that designed to interpret that specific expression.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_specifying_qualities"></a>Specifying qualities</h2></div></div></div><p>Coming soon.</p></div><div class="footnotes"><br /><hr style="width:100; align:left;" /><div id="ftn.id736185" class="footnote"><p><a href="#id736185" class="simpara"><sup class="simpara">[10] </sup></a>To reduce the effort of implementing the IVisitable interface,
+that designed to interpret that specific expression.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_specifying_qualities"></a>Specifying qualities</h2></div></div></div><p>Coming soon.</p></div><div class="footnotes"><br /><hr style="width:100; align:left;" /><div id="ftn.id726491" class="footnote"><p><a href="#id726491" class="simpara"><sup class="simpara">[10] </sup></a>To reduce the effort of implementing the IVisitable interface,
 a <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_VisitableBase.htm" target="_top">base class</a> exists.
 Moreover, a set of extension methods is provided for well known class hierarchy
-such as Exceptions, EventArgs and Expressions.</p></div><div id="ftn.id736209" class="footnote"><p><a href="#id736209" class="simpara"><sup class="simpara">[11] </sup></a>We want the visitors to
+such as Exceptions, EventArgs and Expressions.</p></div><div id="ftn.id726515" class="footnote"><p><a href="#id726515" class="simpara"><sup class="simpara">[11] </sup></a>We want the visitors to
 be stateless so that we can initialize each of them only once, at application
 start up, and then use the computation they express in parallel from different
-threads.</p></div><div id="ftn.id736217" class="footnote"><p><a href="#id736217" class="simpara"><sup class="simpara">[12] </sup></a>We called this technique "managed cast". It consists
+threads.</p></div><div id="ftn.id726522" class="footnote"><p><a href="#id726522" class="simpara"><sup class="simpara">[12] </sup></a>We called this technique "managed cast". It consists
 into delegating a cast to the object that you want to cast, so that it has
 control on the casting behaviour according to runtime conditions.</p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="the_bellis_perennis.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="the_bellis_perennis.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="epic-core.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Part II. The bellis perennis </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 10. Epic.Core</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2012 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>
