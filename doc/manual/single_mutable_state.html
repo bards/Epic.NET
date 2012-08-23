@@ -29,7 +29,7 @@ for the implementation of the domain model’s entities.
 It’s optional, since the Epic infrastructure does not have any requirement in
 the domain model implementation: you can use sealed classes without any
 abstract base and without any attribute.
-<a href="#ftn.id756116" class="footnote"><sup class="footnote"><a id="id756116"></a>[7]</sup></a><br />
+<a href="#ftn.id733030" class="footnote"><sup class="footnote"><a id="id733030"></a>[7]</sup></a><br />
 However we suggest it beyond the context it was designed for.</p><p>Indeed the Epic.Server system is based on the thread safety that this
 pattern provide, to allow a easy to use, transparent and cheap CQRS system.
 So, if you think that your entities will eventually need the features provided
@@ -38,7 +38,7 @@ massively on all entities that you implement.</p><div class="tip" style="margin-
 the GoF State Pattern. A plugin for your favorite IDE will be provided
 soon to get rid of its verbosity and to enhance your productivity.</p></td></tr></table></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_intent"></a>Intent</h2></div></div></div><p>Decouples state transitions from command invocation to enable concurrency and
 simplify synchronized access to an <span class="strong"><strong>entity</strong></span> that <span class="strong"><strong>can</strong></span> reside in its
-own thread of control. <a href="#ftn.id756152" class="footnote"><sup class="footnote"><a id="id756152"></a>[8]</sup></a></p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_motivation"></a>Motivation</h2></div></div></div><p>A private banker and a customer share the access to an investment proposal by
+own thread of control. <a href="#ftn.id733066" class="footnote"><sup class="footnote"><a id="id733066"></a>[8]</sup></a></p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_motivation"></a>Motivation</h2></div></div></div><p>A private banker and a customer share the access to an investment proposal by
 distinct applications. The private banker modifies the proposal while he’s
 talking to the customer via phone.
 The customer can see the proposal’s evolution on his own terminal
@@ -164,7 +164,7 @@ use the right state to handle each request.</p><p>Here you can see the algoritm 
 experience has been described. However the effort required to explain that
 domain model would overwhelm the manual.</p><p>The Epic source code is provided with the classical Evans' example implemented
 using the pattern described here. Look at the Cargo entity for a full example.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_related_patterns"></a>Related Patterns</h2></div></div></div><p>The classical State pattern from the Gang of Four is the noble father of
-the solution proposed here.</p></div><div class="footnotes"><br /><hr style="width:100; align:left;" /><div id="ftn.id756116" class="footnote"><p><a href="#id756116" class="simpara"><sup class="simpara">[7] </sup></a>Ok, I lied: pure interfaces for entities are required.
+the solution proposed here.</p></div><div class="footnotes"><br /><hr style="width:100; align:left;" /><div id="ftn.id733030" class="footnote"><p><a href="#id733030" class="simpara"><sup class="simpara">[7] </sup></a>Ok, I lied: pure interfaces for entities are required.
 But they have so many advantages beyond Epic, that they should already exist,
-even just to enable unit tests of the client code.</p></div><div id="ftn.id756152" class="footnote"><p><a href="#id756152" class="simpara"><sup class="simpara">[8] </sup></a>We want entities that can reside in their own
+even just to enable unit tests of the client code.</p></div><div id="ftn.id733066" class="footnote"><p><a href="#id733066" class="simpara"><sup class="simpara">[8] </sup></a>We want entities that can reside in their own
 thread of control but that work equally well in a single threaded environment.</p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="repositories.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="a_shared_modeling_grammar.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="the_bellis_perennis.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Chapter 7. Repositories </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Part II. The bellis perennis</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2012 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>
