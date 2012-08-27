@@ -49,7 +49,7 @@ bug fixes.
 processes will need to be updated. This kind of changes can not be anticipated
 and they affect almost everything in an application built with Epic. <br />
 The good news is that the customer acknowledges about the change he is
-asking for and he is willing to pay. <sup class="footnoteref">[<a name="id746061" href="#ftn.id746061" class="footnote" id="id746061">5</a>]</sup></p><p>Whenever you get a deeper insight into a domain, you are in a economical
+asking for and he is willing to pay. <sup class="footnoteref">[<a name="id718962" href="#ftn.id718962" class="footnote" id="id718962">5</a>]</sup></p><p>Whenever you get a deeper insight into a domain, you are in a economical
 dilemma: should we change the code or not? And why? Just to clarify the
 model’s expression through the code? <br />
 Finding the right answer to these questions is hard and should be done
@@ -64,7 +64,7 @@ the customer the problems emerged with the previous model.</p><p>Finally, as the
 the model. This could seem quite obvious, but it has a nasty side effect: you
 could introduce new subtle untracked bugs.
 Unit tests' code coverage could reduce the risks but can not eliminate them.
-<sup class="footnoteref">[<a name="id746077" href="#ftn.id746077" class="footnote" id="id746077">6</a>]</sup>
+<sup class="footnoteref">[<a name="id718978" href="#ftn.id718978" class="footnote" id="id718978">6</a>]</sup>
 Fortunatly, since no bug should relate to contracts (or it will lead you to a
 far more expensive refactoring toward a deeper insight), all the code depending
 on the broken component don’t even need to be recompiled. Indeed, one of the
@@ -179,11 +179,11 @@ statistical reports, service bus and so on, always depend on the
 It works like an adapter and a manager serving the other modules, but you could
 replace it with the next wonderful tecnology without affecting any existing
 models.</p><p>In the introduction to the second part of this manual, the DIP will be further
-analyzed in the context of the Epic’s architecture.</p></div><div class="footnotes"><br /><hr style="width:100; align:left;" /><div id="ftn.id746061" class="footnote"><p><sup class="footnote">[<a name="ftn.id746061" href="#id746061" class="simpara" id="ftn.id746061">5</a>] </sup>How will be explained into
+analyzed in the context of the Epic’s architecture.</p></div><div class="footnotes"><br /><hr style="width:100; align:left;" /><div id="ftn.id718962" class="footnote"><p><sup class="footnote">[<a name="ftn.id718962" href="#id718962" class="simpara" id="ftn.id718962">5</a>] </sup>How will be explained into
 the third part of the book, in such a case you should consider whether to
 write a new bounded context or modify the current one.
 The number of production environments running the current code could be a
-persuasive argument in one sense or another.</p></div><div id="ftn.id746077" class="footnote"><p><sup class="footnote">[<a name="ftn.id746077" href="#id746077" class="simpara" id="ftn.id746077">6</a>] </sup>I think that the domain model implementation should take pride in a
+persuasive argument in one sense or another.</p></div><div id="ftn.id718978" class="footnote"><p><sup class="footnote">[<a name="ftn.id718978" href="#id718978" class="simpara" id="ftn.id718978">6</a>] </sup>I think that the domain model implementation should take pride in a
 full code coverage (100%). This seems expensive at first, when you are at 97%
 and you can’t find a way to test those dirty three lines.
 However, a full code coverage will force you to read your code over and over
