@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Welcome changes!
+public: true
 ---
 
 Hi guys! We are ready to announce a few changes in the Epic's directions.
@@ -34,5 +35,4 @@ your application, you can decide to adopt it also as a foundational domain
 This is a major philosophical change in the Epic's vision, because we provide
 a set of models that you can depend on. However a bit of pragmatism moved this 
 choice.
-
 
