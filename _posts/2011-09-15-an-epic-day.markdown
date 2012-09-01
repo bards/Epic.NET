@@ -24,5 +24,5 @@ See you soon!
 </div>
 
 [1]: http://www.ddd-day.it/ "DDD Day - 8 october 2011 - Bologne - Hotel Sheraton"
-[2]: http://epic.tesio.it/doc/the_bellis_perennis.html "Epic's architecture"
-[3]: http://epic.tesio.it/doc/a_shared_modeling_grammar.html "Modeling patterns"
+[2]: http://epic.tesio.it/doc/manual/the_bellis_perennis.html "Epic's architecture"
+[3]: http://epic.tesio.it/doc/manual/a_shared_modeling_grammar.html "Modeling patterns"

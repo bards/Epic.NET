@@ -11,8 +11,8 @@ but this release add some value to the project _per se_.
 Epic.Core
 ---------
 The Epic.Core project includes the entry point of Epic-based application: 
-the [IEnterprise][1], that manages the livecycle of the users' 
-[IWorkingSession][2].
+the [enterprise's organizations][1], that manages the livecycle of the users' 
+[working sessions][2].
 Through the working session a user can achieve or leave his [roles][3]. 
 Each role is a hat that provides access to a set of repositories, domain 
 services, responsibility and tools, just like all real roles in any real 
@@ -68,8 +68,8 @@ describing the patterns and practices that Epic advises.
 
 Note that I'm not a native English speaker: feel free to show me the mistakes!
 
-[1]: https://github.com/Shamar/Epic.NET/blob/v0.2.0/Code/Epic.Core/IEnterprise.cs "Model of the enterprise."
-[2]: https://github.com/Shamar/Epic.NET/blob/v0.2.0/Code/Epic.Core/IWorkingSession.cs "A user working session."
-[3]: http://epic.tesio.it/doc/bounded_roles.html "Bounded Roles"
+[1]: http://epic.tesio.it/doc/api/html/T_Epic_IOrganization.htm "Model of the enterprise's organizaton."
+[2]: http://epic.tesio.it/doc/api/html/T_Epic_IWorkingSession.htm "A user working session."
+[3]: http://epic.tesio.it/doc/manual/bounded_roles.html "Bounded Roles"
 [4]: http://www.methods.co.nz/asciidoc/ "AsciiDoc - Text based document generation"
-[5]: http://epic.tesio.it/doc/nothing_but_business.html "Epic's manual"
+[5]: http://epic.tesio.it/doc/manual/nothing_but_business.html "Epic's manual"

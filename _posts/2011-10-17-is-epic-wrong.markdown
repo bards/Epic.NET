@@ -124,8 +124,8 @@ it's actually built. This way he can drive the development.</p>
 [detail-fn]: #detail-fn "What is an implementation detail?"
 [arc-fn]: #arc-fn "Who is an Architect?"
 [architecture]: http://epic.tesio.it/2011/06/29/software-architecture.html
-[cargo]: https://github.com/Shamar/Epic.NET/blob/devel/Challenges/Challenge00.DDDSample/Challenge00.DDDSample.Default/Cargo/Cargo.cs
-[location]: https://github.com/Shamar/Epic.NET/blob/devel/Challenges/Challenge00.DDDSample/Challenge00.DDDSample.Default/Location/Location.cs
-[voyage]: https://github.com/Shamar/Epic.NET/blob/devel/Challenges/Challenge00.DDDSample/Challenge00.DDDSample.Default/Voyage/Voyage.cs
-[dddsample]: https://github.com/Shamar/Epic.NET/tree/devel/Challenges/Challenge00.DDDSample
-[epic-code]: https://github.com/Shamar/Epic.NET "Epic.NET code base on GitHub"
+[cargo]: https://github.com/bards/Epic.NET/blob/devel/Challenges/Challenge00.DDDSample/Challenge00.DDDSample.Default/Cargo/Cargo.cs
+[location]: https://github.com/bards/Epic.NET/blob/devel/Challenges/Challenge00.DDDSample/Challenge00.DDDSample.Default/Location/Location.cs
+[voyage]: https://github.com/bards/Epic.NET/blob/devel/Challenges/Challenge00.DDDSample/Challenge00.DDDSample.Default/Voyage/Voyage.cs
+[dddsample]: https://github.com/bards/Epic.NET/tree/devel/Challenges/Challenge00.DDDSample
+[epic-code]: https://github.com/bards/Epic.NET "Epic.NET code base on GitHub"

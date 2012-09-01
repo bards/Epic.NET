@@ -120,5 +120,5 @@ However the Epic framework targets a niche markets of applications that have an
 high percieved value from the customer point of view (tipically used for their 
 core business), complex domains and challenging technological requirements.
 
-[bellis]: http://epic.tesio.it/doc/the_bellis_perennis.html
+[bellis]: http://epic.tesio.it/doc/manual/the_bellis_perennis.html
 [do-not-protect]: http://davybrion.com/blog/2009/04/educate-developers-instead-of-protecting-them/ "Educate Developers Instead Of Protecting Them"

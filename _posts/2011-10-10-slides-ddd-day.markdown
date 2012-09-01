@@ -22,7 +22,7 @@ Please help me to make them better!
 **Update** (13/10/2011): Fixed some typo.
 
 [ddd-day]: http://ddd-day.it/
-[manual]: http://epic.tesio.it/doc/manual.html
+[manual]: http://epic.tesio.it/doc/manual/manual.html
 [bbp]: http://beyondbulletpoints.com/ "Beyond Bullet Points"
 
 

@@ -73,7 +73,7 @@ While I think that no money comes without risks, I still see a lot of
 questions than answers.
 
 [ddd-day]: http://ddd-day.it/
-[manual]: http://epic.tesio.it/doc/manual.html
+[manual]: http://epic.tesio.it/doc/manual/manual.html
 [bbp]: http://beyondbulletpoints.com/ "Beyond Bullet Points"
 [ors]: http://www.ors.it/ "Operational Research Systems"
 

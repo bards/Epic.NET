@@ -110,6 +110,6 @@ theirs.
 [2]: http://en.wikipedia.org/wiki/Generic_programming "Generic programming"
 [3]: http://reprog.wordpress.com/2010/03/21/the-hacker-the-architect-and-the-superhero-three-completely-different-ways-to-be-an-excellent-programmer/ "The hacker, the architect and the superhero: three completely different ways to be an excellent programmer"
 [4]: http://www.tesio.it/2010/09/leadership-and-responsibility.html "Leadership and Responsibility"
-[5]: http://epic.tesio.it/doc/the_bellis_perennis.html "The bellis perennis"
+[5]: http://epic.tesio.it/doc/manual/the_bellis_perennis.html "The bellis perennis"
 [6]: http://martinfowler.com/ieeeSoftware/whoNeedsArchitect.pdf "Who needs an architect?"
 [7]: http://www.ics.uci.edu/~fielding/pubs/dissertation/software_arch.htm "Software Architecture by Roy T. Fielding"

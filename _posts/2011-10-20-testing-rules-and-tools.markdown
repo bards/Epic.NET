@@ -77,7 +77,7 @@ MonoCov, on Linux).
 [tdd]: http://www.agiledata.org/essays/tdd.html "TDD = Tests drives the development."
 [dictator]: http://epic.tesio.it/2011/09/25/governance-and-copyright.html
 [aaa-style]: http://c2.com/cgi/wiki?ArrangeActAssert
-[vs-snippets]: https://github.com/Shamar/Epic.NET/tree/devel/Snippets/VisualStudio
-[md-snippets]: https://github.com/Shamar/Epic.NET/tree/devel/Snippets/MonoDevelop
+[vs-snippets]: https://github.com/bards/Epic.NET/tree/devel/Snippets/VisualStudio
+[md-snippets]: https://github.com/bards/Epic.NET/tree/devel/Snippets/MonoDevelop
 [vsi]: http://sourceforge.net/projects/epic-net/files/Epic.Snippets.vsi/download
-[3rdP]: https://github.com/Shamar/Epic.NET/tree/devel/3rdParties
+[3rdP]: https://github.com/bards/Epic.NET/tree/devel/3rdParties
