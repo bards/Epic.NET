@@ -1,0 +1,68 @@
+﻿<html><head><META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=UTF-8" /><title>ApplyTo Method (values, func, remainders)</title><link rel="stylesheet" type="text/css" href="../styles/layout.css" /><link rel="stylesheet" type="text/css" href="../styles/screen.css" /><script type="text/javascript" src="../scripts/script_prototype.js"> </script><script type="text/javascript" src="../scripts/EventUtilities.js"> </script><script type="text/javascript" src="../scripts/StyleUtilities.js"> </script><script type="text/javascript" src="../scripts/SplitScreen.js"> </script><script type="text/javascript" src="../scripts/ElementCollection.js"> </script><script type="text/javascript" src="../scripts/MemberFilter.js"> </script><script type="text/javascript" src="../scripts/LanguageFilter.js"> </script><script type="text/javascript" src="../scripts/CookieDataStore.js"> </script><meta name="file" id="metaFilename" content="M_Epic_Extended_Delegates_FuncExt_ApplyTo__5_1" /><link rel="icon" href="/favicon.ico" /><link rel="alternate" type="application/atom+xml" title="Development log" href="/atom.xml" /><!--[if !IE 7]>
+    <style type="text/css">
+		#epic-wrap {display:table;height:100%}
+	</style>
+  <![endif]--><!--[if lt IE 8]>
+    <style type="text/css">
+        #epic-header {padding-top: 9px}
+    </style>
+  <![endif]--><!--[if IE 8]>
+    <style type="text/css">
+		#epic-wrap {width:100%}
+	</style>
+  <![endif]--><script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-23846269-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+  </script></head><body><div id="epic-wrap"><div id="epic-header"><a href="https://github.com/bards/Epic.NET"><img style="position: absolute; top: 0; left: 0; border: 0;" src="http://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub" /></a><a class="title" href="/">Epic</a><span>dominant domains</span></div><div id="epic-main"><div id="epic-content"><ul class="epic-menu"><li><a href="/index.html">Overview</a></li><li><a href="/roadmap.html">Roadmap</a></li><li><a href="/blog.html" title="Development blog">Blog</a></li><li><a href="/doc/index.html">Documentation</a></li><li><a href="https://github.com/bards/Epic.NET/archives/master">Download</a></li><li><a href="/license.html">License</a></li><li><a href="/credits.html">Bards</a></li></ul><div id="epic-api"><div id="control"><div id="toolbar"><span id="chickenFeet"><a href="R_Project_Documentation.htm">API</a> ► <a href="N_Epic_Extended_Delegates.htm">Epic.Extended.Delegates</a> ► <a href="T_Epic_Extended_Delegates_FuncExt.htm">FuncExt</a> ► <span class="selflink">ApplyTo<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="fs">&lt;'</span><span class="nu">(</span></span>T1, T2, T3, T4, TResult<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="fs">&gt;</span><span class="nu">)</span></span>(<span class="languageSpecificText"><span class="cpp">array&lt;</span></span>Object<span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span>, Func<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="fs">&lt;'</span><span class="nu">(</span></span>T1, T2, T3, T4, TResult<span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="fs">&gt;</span><span class="nu">)</span></span>, <span class="languageSpecificText"><span class="cpp">array&lt;</span></span>Object<span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><span class="languageSpecificText"><span class="cpp">%</span></span>)</span></span></div><br /><span class="topicTitle">ApplyTo<span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><span class="typeparameter">T1</span>, <span class="typeparameter">T2</span>, <span class="typeparameter">T3</span>, <span class="typeparameter">T4</span>, <span class="typeparameter">TResult</span><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span> Method (values, func, remainders)</span></div><div id="main"><span style="color: DarkGray"></span><div class="summary">
+            Applies an array of objects to a function.
+            </div><p style="padding-bottom:20px;"><b>Assembly</b>: <span sdata="assembly">Epic.Prelude</span></p><div class="section"><div class="sectionTitle">Declaration Syntax</div><div class="sectionContent"><div id="syntaxSection"><table class="filter"><tr class="tabs" id="syntaxTabs"><td class="tab" x-lang="CSharp" onclick="toggleClass('syntaxTabs','x-lang','CSharp','activeTab','tab'); toggleStyle('syntaxBlocks','x-lang','CSharp','display','block','none');">C#</td></tr></table><div id="syntaxBlocks"><div class="code" x-lang="CSharp"><pre xml:space="preserve">
+<span class="keyword">public</span> <span class="keyword">static</span> TResult <span class="identifier">ApplyTo</span>&lt;T1, T2, T3, T4, TResult&gt;(
+	<span class="keyword">this</span> <span class="nolink">Object</span>[] <span class="parameter">values</span>,
+	<span class="nolink">Func</span>&lt;T1, T2, T3, T4, TResult&gt; <span class="parameter">func</span>,
+	<span class="keyword">out</span> <span class="nolink">Object</span>[] <span class="parameter">remainders</span>
+)
+</pre></div></div></div></div></div><div class="section"><div class="sectionTitle">Generic Template Parameters</div><div class="sectionContent"><dl><dt><span class="parameter">T1</span></dt><dd>
+            The 1st type parameter.
+            </dd><dt><span class="parameter">T2</span></dt><dd>
+            The 2nd type parameter.
+            </dd><dt><span class="parameter">T3</span></dt><dd>
+            The 3rd type parameter.
+            </dd><dt><span class="parameter">T4</span></dt><dd>
+            The 4th type parameter.
+            </dd><dt><span class="parameter">TResult</span></dt><dd>
+            The type of the result.
+            </dd></dl></div></div><div id="parameters"><div class="section"><div class="sectionTitle">Parameters</div><div class="sectionContent"><dl paramName="values"><dt><span class="parameter">values</span> (<span class="languageSpecificText"><span class="cpp">array&lt;</span></span><span class="nolink">Object</span><span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span>)</dt><dd>
+            Values to apply.
+            </dd></dl><dl paramName="func"><dt><span class="parameter">func</span> (<span class="nolink">Func</span><span class="languageSpecificText"><span class="cs">&lt;</span><span class="vb">(Of </span><span class="cpp">&lt;</span><span class="nu">(</span><span class="fs">&lt;'</span></span><span class="selflink"><span class="typeparam">T1</span></span>, <span class="selflink"><span class="typeparam">T2</span></span>, <span class="selflink"><span class="typeparam">T3</span></span>, <span class="selflink"><span class="typeparam">T4</span></span>, <span class="selflink"><span class="typeparam">TResult</span></span><span class="languageSpecificText"><span class="cs">&gt;</span><span class="vb">)</span><span class="cpp">&gt;</span><span class="nu">)</span><span class="fs">&gt;</span></span>)</dt><dd>
+            Function to apply.
+            </dd></dl><dl paramName="remainders"><dt><span class="parameter">remainders</span> (<span class="languageSpecificText"><span class="cpp">array&lt;</span></span><span class="nolink">Object</span><span class="languageSpecificText"><span class="cpp">&gt;</span><span class="cs">[]</span><span class="vb">()</span><span class="nu">[]</span><span class="fs">[]</span></span><span class="cpp">%</span>)</dt><dd>
+            Values ignored by <span class="parameter">func</span>.
+            </dd></dl></div></div></div><div class="section"><div class="sectionTitle">Return Value</div><div class="sectionContent">
+            The result returned by <span class="parameter">func</span>.
+            </div></div><div class="section"><div class="sectionTitle">Usage Note</div><div class="sectionContent">In Visual Basic and C#, you can call this method as an instance method on any object of type . When you use instance method syntax to call this method, omit the first parameter.</div></div><div class="section"><div class="sectionTitle">Exceptions</div><div class="sectionContent"><table class="exceptions"><tr><th class="exceptionNameColumn">Exception</th><th class="exceptionConditionColumn">Condition</th></tr><tr><td><span class="nolink">ArgumentNullException</span></td><td><span class="parameter">values</span> or <span class="parameter">func</span>
+            is <span class="keyword"><span class="cs">null</span><span class="vb">Nothing</span><span class="cpp">nullptr</span></span>.<br /></td></tr><tr><td><span class="nolink">InvalidCastException</span></td><td>The first element of <span class="parameter">values</span>
+            can not be casted to <span class="typeparameter">T1</span>, the second element can not be
+            casted to <span class="typeparameter">T2</span>, the third element can not be casted to <span class="typeparameter">T3</span>
+            or the fourth element can not be casted to <span class="typeparameter">T4</span>.<br /></td></tr><tr><td><a href="T_Epic_Extended_Delegates_MissingValuesException.htm">MissingValuesException</a></td><td><span class="parameter">values</span> contains too few elements
+            to be used as arguments for <span class="parameter">func</span>.<br /></td></tr></table></div></div></div></div></div></div></div><div id="disqus_thread" /><script type="text/javascript">
+    var disqus_shortname = 'epic-net'; // required: replace example with your forum shortname
+
+    // The following are highly recommended additional parameters. Remove the slashes in front to use.
+    var disqus_identifier = document.getElementById('metaFilename').content;
+    var disqus_url = 'http://epic.tesio.it/doc/api/html/'+disqus_identifier+'.htm';
+    var disqus_title = "ApplyTo Method (values, func, remainders)";
+    (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+</script><noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript><a href="http://disqus.com" class="dsq-brlink">blog comments powered by <span class="logo-disqus">Disqus</span></a><div id="epic-footer"><div class="epic-copyright">Copyright © 2010-2012 Giacomo Tesio</div></div></body></html>
