@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Chapter 2. Bounded Roles</title><link rel="stylesheet" type="text/css" href="css/layout.css" /><link rel="stylesheet" type="text/css" href="css/screen.css" /><link rel="stylesheet" type="text/css" href="css/shCore.css" /><link rel="stylesheet" type="text/css" href="css/shCoreDefault.css" /><link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" /><link rel="stylesheet" type="text/css" href="css/documentation.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.77.1" /><link rel="home" href="manual.html" title="Dominant Domains" /><link rel="up" href="a_shared_modeling_grammar.html" title="Part I. Toward a shared modeling grammar" /><link rel="prev" href="poco.html" title="Chapter 1. Plain old CLR objects" /><link rel="next" href="shared_identifiers.html" title="Chapter 3. Shared Identifiers" /><meta charset="utf-8" /><link rel="icon" href="/favicon.ico" /><script src="../script/shCore.js" type="text/javascript"></script><script src="../script/shBrushCSharp.js" type="text/javascript"></script><link rel="alternate" type="application/atom+xml" title="Development log" href="/atom.xml" /><!--[if !IE 7]>
+<html xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="cache-control" content="no-cache" /><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Chapter 2. Bounded Roles</title><link rel="stylesheet" type="text/css" href="css/layout.css" /><link rel="stylesheet" type="text/css" href="css/screen.css" /><link rel="stylesheet" type="text/css" href="css/shCore.css" /><link rel="stylesheet" type="text/css" href="css/shCoreDefault.css" /><link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" /><link rel="stylesheet" type="text/css" href="css/documentation.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.77.1" /><link rel="home" href="manual.html" title="Dominant Domains" /><link rel="up" href="a_shared_modeling_grammar.html" title="Part I. Toward a shared modeling grammar" /><link rel="prev" href="poco.html" title="Chapter 1. Plain old CLR objects" /><link rel="next" href="shared_identifiers.html" title="Chapter 3. Shared Identifiers" /><meta charset="utf-8" /><link rel="icon" href="/favicon.ico" /><script src="../script/shCore.js" type="text/javascript"></script><script src="../script/shBrushCSharp.js" type="text/javascript"></script><link rel="alternate" type="application/atom+xml" title="Development log" href="/atom.xml" /><!--[if !IE 7]>
     <style type="text/css">
 		#wrap {display:table;height:100%}
 	</style>
@@ -30,7 +30,7 @@ upon the same concepts.</p><p>What is an entity in a context will be a value obj
 organization chart: different users can access to different contexts, often
 with slightly different capabilities.</p><p>Moreover, while you can sell the same domain model to different organizations,
 you can’t neither predict nor generalize the organizational structure.
-<sup class="footnoteref">[<a name="id809035" href="#ftn.id809035" class="footnote" id="id809035">2</a>]</sup>
+<sup class="footnoteref">[<a name="id773671" href="#ftn.id773671" class="footnote" id="id773671">2</a>]</sup>
 You can make your software configurable, but whenever the access control
 rules are complex enough you fall in a customization hell that will erode
 the return on investment.</p><p>As an alternative, we decided to model the typical roles of the customer’s
@@ -76,7 +76,7 @@ infrastructural code.</p><p>For example the repositories can bind the user’s a
 according to the fanciest rules that your customer can imagine, the domain
 services can be customized to log calls or to cache results and everything you
 hate will become easy.</p><p>You just have to deal with angry stakeholders that will tell you: "but we
-already did it three months ago!"</p></div><div class="footnotes"><br /><hr style="width:100; align:left;" /><div id="ftn.id809035" class="footnote"><p><sup class="footnote">[<a name="ftn.id809035" href="#id809035" class="simpara" id="ftn.id809035">2</a>] </sup>In the second chapter of Analysis Pattern, Martin Fowler describe a
+already did it three months ago!"</p></div><div class="footnotes"><br /><hr style="width:100; align:left;" /><div id="ftn.id773671" class="footnote"><p><sup class="footnote">[<a name="ftn.id773671" href="#id773671" class="simpara" id="ftn.id773671">2</a>] </sup>In the second chapter of Analysis Pattern, Martin Fowler describe a
 set of patterns for accountability management. While such patterns are both
 elegant and powerfull we found them affected by a major flaw: they are not
 part of the ubiquitous language.<br />

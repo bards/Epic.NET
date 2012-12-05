@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Chapter 9. Epic.Prelude</title><link rel="stylesheet" type="text/css" href="css/layout.css" /><link rel="stylesheet" type="text/css" href="css/screen.css" /><link rel="stylesheet" type="text/css" href="css/shCore.css" /><link rel="stylesheet" type="text/css" href="css/shCoreDefault.css" /><link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" /><link rel="stylesheet" type="text/css" href="css/documentation.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.77.1" /><link rel="home" href="manual.html" title="Dominant Domains" /><link rel="up" href="the_bellis_perennis.html" title="Part II. The bellis perennis" /><link rel="prev" href="the_bellis_perennis.html" title="Part II. The bellis perennis" /><link rel="next" href="epic-core.html" title="Chapter 10. Epic.Core" /><meta charset="utf-8" /><link rel="icon" href="/favicon.ico" /><script src="../script/shCore.js" type="text/javascript"></script><script src="../script/shBrushCSharp.js" type="text/javascript"></script><link rel="alternate" type="application/atom+xml" title="Development log" href="/atom.xml" /><!--[if !IE 7]>
+<html xmlns="http://www.w3.org/1999/xhtml"><meta http-equiv="cache-control" content="no-cache" /><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8" /><title>Chapter 9. Epic.Prelude</title><link rel="stylesheet" type="text/css" href="css/layout.css" /><link rel="stylesheet" type="text/css" href="css/screen.css" /><link rel="stylesheet" type="text/css" href="css/shCore.css" /><link rel="stylesheet" type="text/css" href="css/shCoreDefault.css" /><link rel="stylesheet" type="text/css" href="css/shThemeDefault.css" /><link rel="stylesheet" type="text/css" href="css/documentation.css" /><meta name="generator" content="DocBook XSL Stylesheets V1.77.1" /><link rel="home" href="manual.html" title="Dominant Domains" /><link rel="up" href="the_bellis_perennis.html" title="Part II. The bellis perennis" /><link rel="prev" href="the_bellis_perennis.html" title="Part II. The bellis perennis" /><link rel="next" href="epic-core.html" title="Chapter 10. Epic.Core" /><meta charset="utf-8" /><link rel="icon" href="/favicon.ico" /><script src="../script/shCore.js" type="text/javascript"></script><script src="../script/shBrushCSharp.js" type="text/javascript"></script><link rel="alternate" type="application/atom+xml" title="Development log" href="/atom.xml" /><!--[if !IE 7]>
     <style type="text/css">
 		#wrap {display:table;height:100%}
 	</style>
@@ -47,7 +47,7 @@ these two connected responsibilities <span class="strong"><strong>execution</str
 looks to that particular value objects that work like mathematical functions.
 Specifications, for example, are predicates that can be both executed, to know
 whether a candidate satisfy them, or interpreted, translating them into a human
-readable sentence or into SQL queries. <sup class="footnoteref">[<a name="id811618" href="#ftn.id811618" class="footnote" id="id811618">10</a>]</sup></p><p>The need for value objects' interpretation poses a problem to software
+readable sentence or into SQL queries. <sup class="footnoteref">[<a name="id776257" href="#ftn.id776257" class="footnote" id="id776257">10</a>]</sup></p><p>The need for value objects' interpretation poses a problem to software
 maintenance: how can we stick to the open-closed principle if we have to
 interpret an ever growing number of value objects' types?</p><p>Most of interpretation techniques rely on the Visitor design pattern
 and its underlying mechanism known as "double dispatch".
@@ -60,11 +60,11 @@ change all the visitors.</p><p>To address this issue we developed the <span clas
 actually is just an acyclic visitor that replaces inheritance with composition.</p><p>The base interface for visitable objects is the
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_IVisitable.htm" target="_top">IVisitable</a> interface
 that defines the <a class="ulink" href="http://epic.tesio.it/doc/api/html/M_Epic_IVisitable_Accept__1.htm" target="_top">Accept</a>
-method. <sup class="footnoteref">[<a name="id811672" href="#ftn.id811672" class="footnote" id="id811672">11</a>]</sup></p><p>The first difference from the classical pattern is that Accept takes a
+method. <sup class="footnoteref">[<a name="id776311" href="#ftn.id776311" class="footnote" id="id776311">11</a>]</sup></p><p>The first difference from the classical pattern is that Accept takes a
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_IVisitor_1.htm" target="_top">visitor</a> and a
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_IVisitContext.htm" target="_top">context for the visit</a>
-decoupling the visitor from its mutable state. <sup class="footnoteref">[<a name="id811696" href="#ftn.id811696" class="footnote" id="id811696">12</a>]</sup></p><p>Moreover, the visitor take controls over it’s own cast to the specialized
-visitor type <sup class="footnoteref">[<a name="id811703" href="#ftn.id811703" class="footnote" id="id811703">13</a>]</sup> through
+decoupling the visitor from its mutable state. <sup class="footnoteref">[<a name="id776335" href="#ftn.id776335" class="footnote" id="id776335">12</a>]</sup></p><p>Moreover, the visitor take controls over it’s own cast to the specialized
+visitor type <sup class="footnoteref">[<a name="id776343" href="#ftn.id776343" class="footnote" id="id776343">13</a>]</sup> through
 the method <a class="ulink" href="http://epic.tesio.it/doc/api/html/M_Epic_IVisitor_1_AsVisitor__1.htm" target="_top">AsVisitor&lt;TExpression&gt;(TExpression)</a>.</p><p>Thus, when the visitor is an instance of a class that extends the
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_CompositeVisitorBase_2.htm" target="_top">CompositeVisitorBase&lt;TResult, TExpression&gt;</a>
 abstract class, the composition will be able to returns a specialized visitor
@@ -198,7 +198,7 @@ public sealed class EnglishExceptionsFormatter : CompositeVisitorBase&lt;string,
 extends <code class="literal">System.ArgumentException</code> and thus adds to the message provided by the thrower
 the parameter name. We could fix this with a custom visitor like we did till now,
 but this time we can write a little more general visitor
-for the english composition: a <code class="literal">Format&lt;TException&gt;</code>. <sup class="footnoteref">[<a name="id811804" href="#ftn.id811804" class="footnote" id="id811804">14</a>]</sup></p><script type="syntaxhighlighter" class="brush: csharp">public sealed class ReturnMessages : CompositeVisitor&lt;string&gt;.VisitorBase, IVisitor&lt;string, Exception&gt; {...}
+for the english composition: a <code class="literal">Format&lt;TException&gt;</code>. <sup class="footnoteref">[<a name="id776443" href="#ftn.id776443" class="footnote" id="id776443">14</a>]</sup></p><script type="syntaxhighlighter" class="brush: csharp">public sealed class ReturnMessages : CompositeVisitor&lt;string&gt;.VisitorBase, IVisitor&lt;string, Exception&gt; {...}
 public sealed class ConstantMessage : CompositeVisitor&lt;string&gt;.VisitorBase, IVisitor&lt;string, Exception&gt; {...}
 public sealed class InnerDomainExceptionUnwrap : CompositeVisitor&lt;string&gt;.VisitorBase, IVisitor&lt;string, Exception&gt; {...}
 public sealed class Format&lt;TException&gt; :
@@ -302,17 +302,17 @@ enhance the behaviour of a <code class="literal">CompositeVisitor</code> by simp
 trees and translate them to nice, human readable, messages or to SQL queries.
 Moreover, when the class hierachy grows, you don’t need to break existing
 visitors: you can always extend the behaviour of the composition by adding
-code, keeping the DLLs already deployed untouched.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_specifying_qualities"></a>Specifying qualities</h2></div></div></div><p>Coming soon.</p></div><div class="footnotes"><br /><hr style="width:100; align:left;" /><div id="ftn.id811618" class="footnote"><p><sup class="footnote">[<a name="ftn.id811618" href="#id811618" class="simpara" id="ftn.id811618">10</a>] </sup>A closer look shows that execution
+code, keeping the DLLs already deployed untouched.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_specifying_qualities"></a>Specifying qualities</h2></div></div></div><p>Coming soon.</p></div><div class="footnotes"><br /><hr style="width:100; align:left;" /><div id="ftn.id776257" class="footnote"><p><sup class="footnote">[<a name="ftn.id776257" href="#id776257" class="simpara" id="ftn.id776257">10</a>] </sup>A closer look shows that execution
 is actually a specific kind of interpretation, done by the CLR. Indeed, some stacktraces
 from <a class="ulink" href="http://msdn.microsoft.com/en-us/library/bb345362" target="_top">Expression&lt;TDelegate&gt;.Compile</a>
-show that expression tree compilation is done by a visitor producing the executable IL code.</p></div><div id="ftn.id811672" class="footnote"><p><sup class="footnote">[<a name="ftn.id811672" href="#id811672" class="simpara" id="ftn.id811672">11</a>] </sup>To reduce the effort of implementing the IVisitable interface,
+show that expression tree compilation is done by a visitor producing the executable IL code.</p></div><div id="ftn.id776311" class="footnote"><p><sup class="footnote">[<a name="ftn.id776311" href="#id776311" class="simpara" id="ftn.id776311">11</a>] </sup>To reduce the effort of implementing the IVisitable interface,
 a <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_VisitableBase.htm" target="_top">base class</a> exists.
 Moreover, a set of extension methods is provided for well known class hierarchy
-such as Exceptions, EventArgs and Expressions.</p></div><div id="ftn.id811696" class="footnote"><p><sup class="footnote">[<a name="ftn.id811696" href="#id811696" class="simpara" id="ftn.id811696">12</a>] </sup>We want the visitors to
+such as Exceptions, EventArgs and Expressions.</p></div><div id="ftn.id776335" class="footnote"><p><sup class="footnote">[<a name="ftn.id776335" href="#id776335" class="simpara" id="ftn.id776335">12</a>] </sup>We want the visitors to
 be stateless so that we can initialize each of them only once, at application
 start up, and then use the computation they express in parallel from different
-threads.</p></div><div id="ftn.id811703" class="footnote"><p><sup class="footnote">[<a name="ftn.id811703" href="#id811703" class="simpara" id="ftn.id811703">13</a>] </sup>We called this technique "managed cast". It consists
+threads.</p></div><div id="ftn.id776343" class="footnote"><p><sup class="footnote">[<a name="ftn.id776343" href="#id776343" class="simpara" id="ftn.id776343">13</a>] </sup>We called this technique "managed cast". It consists
 into delegating a cast to the object that you want to cast, so that it has
-control on the casting behaviour according to runtime conditions.</p></div><div id="ftn.id811804" class="footnote"><p><sup class="footnote">[<a name="ftn.id811804" href="#id811804" class="simpara" id="ftn.id811804">14</a>] </sup>Being such a use case
+control on the casting behaviour according to runtime conditions.</p></div><div id="ftn.id776443" class="footnote"><p><sup class="footnote">[<a name="ftn.id776443" href="#id776443" class="simpara" id="ftn.id776443">14</a>] </sup>Being such a use case
 so frequent, Epic provides an even more general version of this class: the
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_Visitors_SimpleFormatter_1.htm" target="_top">SimpleFormatter&lt;TTarget&gt;</a>. </p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="the_bellis_perennis.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="the_bellis_perennis.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="epic-core.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Part II. The bellis perennis </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 10. Epic.Core</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2012 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>
