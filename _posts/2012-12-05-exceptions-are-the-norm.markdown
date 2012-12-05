@@ -69,8 +69,7 @@ A number of (funny) options come to mind:
 The first three options actually eases the application developer's life: he
 doesn't need to check for error codes and/or exceptions, he can just open the
 file read the content and print it out. I'm quite sure that at least a man from
-marketing exists that could describe such behaviours as an innovative feature!
-:-)
+marketing exists that could describe such behaviours as an innovative feature! :-)
 
 Unfortunately, even [the most advanced operating system][9] I know of, still
 adopts the forth, boring, approach. It **replies** to the caller, "sorry, I
@@ -123,7 +122,7 @@ runtime, they stop to be failures and become results among others.
 
 That sounds good, since a software without failures is definitely **reliable**.
 
-Howevere, being the exceptional paths so frequent in
+However, being the exceptional paths so frequent in
 sofware development, they are **expensive** to design and handle.
 
 We are lazy, you know. At the very end, in the deep of our soul, we still
