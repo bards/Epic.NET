@@ -1,7 +1,6 @@
 ---
 layout: post
 title: Exceptions are the norm!
-public: false
 author: giacomo
 ---
 
