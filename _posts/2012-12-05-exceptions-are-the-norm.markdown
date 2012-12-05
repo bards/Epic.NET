@@ -161,9 +161,9 @@ Still, the http server didn't fail, it just replied (in a protocol designed to b
 Reliability: a feature like other
 ---------------------------------
 A reliable application doesn't fail, by design. It handle properly all 
-exceptional conditions that can occurs.  
-In this months I carefully designed a 
-lot of exceptions that enforce business rules of the domain model I wrote.
+exceptional conditions that can occur.  
+In these months I have carefully designed a lot of expressive exceptions 
+that enforce business rules of the domain model I wrote.
 Without checked exceptions, I had to manually keep track of each exception 
 thrown and each exception forwarded by each method. It was a pain.
 
@@ -202,12 +202,15 @@ Rewording Bolognese:
 
 I've found such a pain in the Exception handling of .NET that I considered 
 to move out.  
-However, right now, I'm designing a tools to improve such a poor exception 
+However, right now, I'm designing a tool to improve such a poor exception 
 handling. Such a tool will be included in Epic when ready. 
 
 I'm not here to say that Java checked exceptions are perfect and I really 
 know all the issues with them. However, when you have to write a reliable 
 domain model that grants aggregates' consistency, C# becomes a pain.
+
+And IMHO, this is due to misconceptions about what an exception ultimately is: 
+simply one of the possible responses to a computational request.
 
 
 [1]: http://en.wikipedia.org/wiki/Failure
