@@ -197,7 +197,7 @@ All this analysis lead me to this conclusions:
 Rewording Bolognese:
 
 > The .NET framework decided to allow developers to hide and/or ignore
-> some of the possible results of every computation. They organized such
+> some of the possible results of every computation. It organized such
 > hidable/ignorable results in a class hierarchy rooted at `System.Exception`.
 > By doing so, it makes it easier to write **unreliable** apps, 
 > but more difficult to write **reliable** apps.
