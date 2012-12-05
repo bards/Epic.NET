@@ -7,20 +7,19 @@ author: giacomo
 
 This year has been quite challenging. I've worked on a brand-new domain model
 for an italian online bank, offering financial advice through different channels
-(phone, web, personal contact) in the context of the MiFID european directive.
+(phone, web, personal contact) in the context of the [MiFID][19] european directive.
 
 The domain has been split in seven different bounded contexts, designed during
 the first six months of the year but still under tuning due to both change
 requests and deeper insights.
 
 The full application consists of 29 .NET solutions, 111 projects of different
-types developed in 11 months by an average of nine developers (not counting the
-effort by the KAM, the project manager and the third parties).
+types developed in 11 months by an average of nine developers.
 
 We faced a lot of challenges, both technical and organizational and everybody
 have learned a lot in the process.
 
-To me, one of the most surprising lesson that I learned the hard way, is about
+To me, one of the most surprising lessons that I learned the hard way is about
 the meaning of exceptions and how they work in DDD projects.
 
 Let's start with some definitions from common sense.
@@ -209,7 +208,7 @@ Rewording Bolognese:
 This year, I've found such a pain in the Exception handling of .NET that 
 I'm tempted to move to a different technology.
 However, right now, I'm designing a tool to improve such a poor exception 
-handling. Such a tool will be included in Epic when ready. 
+handling. This tool will be included in Epic when ready. 
 
 I'm not here to say that Java checked exceptions are perfect and I really 
 know [all the issues with them][16]. However, when you have to write a reliable 
@@ -236,3 +235,4 @@ simply one of the possible responses to a computational request.
 [15]: http://www.nasdaq.com/investing/placing-forex-orders.stm
 [16]: http://www.artima.com/intv/handcuffs.html
 [17]: http://en.wikipedia.org/wiki/Computation
+[19]: http://ec.europa.eu/internal_market/securities/isd/mifid_en.htm
