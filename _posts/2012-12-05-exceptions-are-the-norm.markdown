@@ -94,8 +94,10 @@ It becomes a carefully designed behaviour, like the succesful one.
 
 Exceptions are responses like other 
 -----------------------------------
-Face it, every computation from real world can fail.   
-The simplest computation that I can think of, the sum of two integers, can overflow.
+Face it, every [computation][17] from real world can fail.   
+The simplest computation that I can think of, the sum of two integers, can overflow.  
+But even business rules define conditions that a domain model has to avoid to 
+keep consistency: a [stop order][15] can not be sent to the market in the past.
 
 In plain old procedural languages like C, [special return values][10] have been
 used to express the impossibility to perform the desired computation. 
@@ -173,18 +175,20 @@ a reliable application but pay for unreliable one.
 
 This makes prototypes... well, just prototypes!
 
-Nevertheless a lot of successful applications are unreliable. And still [successful][15].
+Nevertheless a lot of successful applications are unreliable. And still 
+<a href="http://upload.wikimedia.org/wikipedia/en/d/de/Failwhale.png" target="_blank">successful</a>.  
 This happens because reliability is just a feature like any other.
 
-What make an unhandled exception critical is the trust that the user has in the 
-application. If he truly rely on the application for its own business, he will
+What makes an unhandled exception critical is the trust that the user has in the
+application. If he truly relies on the application for its own business, he will
 pay for reliability, otherwise he will not.
 
 In a nutshell
 -------------
-All this analysis lead me to this conclusions:
+All this analysis led me to these conclusions:
 * every single computation can fail
-* every computation becomes reliable when we include failures among its responses
+* every computation becomes reliable when we include the failures among its 
+  normal responses
 * exceptions are just one way to express such failures (with a nice syntax that
   helps us to focus on the successful code path that we all love)
 * hiding exceptional conditions that can occur is always an expensive **API design bug** 
@@ -202,13 +206,13 @@ Rewording Bolognese:
 > By doing so, it makes it easier to write **unreliable** apps, 
 > but more difficult to write **reliable** apps.
 
-I've found such a pain in the Exception handling of .NET that I considered 
-to move out.  
+This year, I've found such a pain in the Exception handling of .NET that 
+I'm tempted to move to a different technology.
 However, right now, I'm designing a tool to improve such a poor exception 
 handling. Such a tool will be included in Epic when ready. 
 
 I'm not here to say that Java checked exceptions are perfect and I really 
-know all the issues with them. However, when you have to write a reliable 
+know [all the issues with them][16]. However, when you have to write a reliable 
 domain model that grants aggregates' consistency, C# becomes a pain.
 
 And IMHO, this is due to misconceptions about what an exception ultimately is: 
@@ -229,4 +233,6 @@ simply one of the possible responses to a computational request.
 [12]: http://lucabolognese.wordpress.com/2012/11/19/exceptions-vs-return-values-to-represent-errors-in-f-i-conceptual-view/
 [13]: http://blogs.msdn.com/b/ericlippert/archive/2008/09/10/vexing-exceptions.aspx
 [14]: http://www.haskell.org/haskellwiki/Error_vs._Exception
-[15]: http://upload.wikimedia.org/wikipedia/en/d/de/Failwhale.png
+[15]: http://www.nasdaq.com/investing/placing-forex-orders.stm
+[16]: http://www.artima.com/intv/handcuffs.html
+[17]: http://en.wikipedia.org/wiki/Computation
