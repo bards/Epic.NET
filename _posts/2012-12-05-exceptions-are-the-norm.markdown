@@ -71,20 +71,20 @@ file read the content and print it out. I'm quite sure that at least a man from
 marketing exists that could describe such behaviours as an innovative feature! :-)
 
 Unfortunately, even [the most advanced operating system][9] I know of, still
-adopts the forth, boring, approach. It **replies** to the caller, "sorry, I
+adopts the fourth, boring, approach. It **replies** to the caller, "sorry, I
 can't fulfil your request". It can be a -1 value returned by an [open][7] or one
 of the [IOExceptions][8] designed by Microsoft, but any serious operating
 system's API informs the caller whenever it fails to fulfil a request.
 
 Such a boring pattern doesn't come from smart engineers, it's spread in real
-life: whenever my wife tell me to clean the kitchen, I **reply** that I have to
+life: whenever my wife tells me to clean the kitchen, I **reply** that I have to
 do something more important (say, play Mahjong with my daughter) so I can't
 actually fulfil her request.  
 Then, most of times, she starts polling.  
 Why can't I block the caller till the end of the game?  
 Simply because, as an husband, I'm **designed** to help my wife.
 
-Let's look at it deeper: the forth, boring, solution is actually a devilish trick!
+Let's look at it deeper: the fourth, boring, solution is actually a devilish trick!
 By **designing** the computation so that it can fail, it can not fail anymore!
 
 Indeed, the failure becomes one of the possible response of the computation, 
