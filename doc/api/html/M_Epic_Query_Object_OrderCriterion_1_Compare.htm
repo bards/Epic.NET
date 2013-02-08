@@ -29,10 +29,13 @@
 	TEntity <span class="parameter">x</span>,
 	TEntity <span class="parameter">y</span>
 )</pre></div></div></div></div></div><div id="parameters"><div class="section"><div class="sectionTitle">Parameters</div><div class="sectionContent"><dl paramName="x"><dt><span class="parameter">x</span> (<a href="T_Epic_Query_Object_OrderCriterion_1.htm"><span class="typeparam">TEntity</span></a>)</dt><dd>
-            The x entity.
+            The first entity.
             </dd></dl><dl paramName="y"><dt><span class="parameter">y</span> (<a href="T_Epic_Query_Object_OrderCriterion_1.htm"><span class="typeparam">TEntity</span></a>)</dt><dd>
-            The y entity.
-            </dd></dl></div></div></div><div class="section"><div class="sectionTitle">Return Value</div><div class="sectionContent"><p style="color: #dc143c; font-size: 8.5pt; font-weight: bold;">[Missing &lt;returns&gt; documentation for "M:Epic.Query.Object.OrderCriterion`1.Compare(`0,`0)"]</p></div></div></div></div></div></div></div><div id="disqus_thread" /><script type="text/javascript">
+            The second entity.
+            </dd></dl></div></div></div><div class="section"><div class="sectionTitle">Return Value</div><div class="sectionContent"><span class="code">0</span> if <span class="parameter">x</span> and <span class="parameter">y</span> are equivalent
+            for the current order criterion, a positive number if 
+            <span class="parameter">x</span> goes after <span class="parameter">y</span> and a negative number 
+            if <span class="parameter">x</span> goes before <span class="parameter">y</span>.</div></div><div class="section"><div class="sectionTitle">Exceptions</div><div class="sectionContent"><table class="exceptions"><tr><th class="exceptionNameColumn">Exception</th><th class="exceptionConditionColumn">Condition</th></tr><tr><td><span class="nolink">InvalidOperationException</span></td><td><span class="parameter">x</span> and <span class="parameter">y</span> cannot be sorted by the current criterion.<br /></td></tr></table></div></div></div></div></div></div></div><div id="disqus_thread" /><script type="text/javascript">
     var disqus_shortname = 'epic-net'; // required: replace example with your forum shortname
 
     // The following are highly recommended additional parameters. Remove the slashes in front to use.

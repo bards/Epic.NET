@@ -47,7 +47,7 @@ these two connected responsibilities <span class="strong"><strong>execution</str
 looks to that particular value objects that work like mathematical functions.
 Specifications, for example, are predicates that can be both executed, to know
 whether a candidate satisfy them, or interpreted, translating them into a human
-readable sentence or into SQL queries. <sup class="footnoteref">[<a name="id726427" href="#ftn.id726427" class="footnote" id="id726427">10</a>]</sup></p><p>The need for value objects' interpretation poses a problem to software
+readable sentence or into SQL queries. <sup class="footnoteref">[<a name="id806650" href="#ftn.id806650" class="footnote" id="id806650">10</a>]</sup></p><p>The need for value objects' interpretation poses a problem to software
 maintenance: how can we stick to the open-closed principle if we have to
 interpret an ever growing number of value objects' types?</p><p>Most of interpretation techniques rely on the Visitor design pattern
 and its underlying mechanism known as "double dispatch".
@@ -60,11 +60,11 @@ change all the visitors.</p><p>To address this issue we developed the <span clas
 actually is just an acyclic visitor that replaces inheritance with composition.</p><p>The base interface for visitable objects is the
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_IVisitable.htm" target="_top">IVisitable</a> interface
 that defines the <a class="ulink" href="http://epic.tesio.it/doc/api/html/M_Epic_IVisitable_Accept__1.htm" target="_top">Accept</a>
-method. <sup class="footnoteref">[<a name="id726481" href="#ftn.id726481" class="footnote" id="id726481">11</a>]</sup></p><p>The first difference from the classical pattern is that Accept takes a
+method. <sup class="footnoteref">[<a name="id806704" href="#ftn.id806704" class="footnote" id="id806704">11</a>]</sup></p><p>The first difference from the classical pattern is that Accept takes a
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_IVisitor_1.htm" target="_top">visitor</a> and a
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_IVisitContext.htm" target="_top">context for the visit</a>
-decoupling the visitor from its mutable state. <sup class="footnoteref">[<a name="id726505" href="#ftn.id726505" class="footnote" id="id726505">12</a>]</sup></p><p>Moreover, the visitor take controls over it’s own cast to the specialized
-visitor type <sup class="footnoteref">[<a name="id726513" href="#ftn.id726513" class="footnote" id="id726513">13</a>]</sup> through
+decoupling the visitor from its mutable state. <sup class="footnoteref">[<a name="id806728" href="#ftn.id806728" class="footnote" id="id806728">12</a>]</sup></p><p>Moreover, the visitor take controls over it’s own cast to the specialized
+visitor type <sup class="footnoteref">[<a name="id806735" href="#ftn.id806735" class="footnote" id="id806735">13</a>]</sup> through
 the method <a class="ulink" href="http://epic.tesio.it/doc/api/html/M_Epic_IVisitor_1_AsVisitor__1.htm" target="_top">AsVisitor&lt;TExpression&gt;(TExpression)</a>.</p><p>Thus, when the visitor is an instance of a class that extends the
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_CompositeVisitorBase_2.htm" target="_top">CompositeVisitorBase&lt;TResult, TExpression&gt;</a>
 abstract class, the composition will be able to returns a specialized visitor
@@ -198,7 +198,7 @@ public sealed class EnglishExceptionsFormatter : CompositeVisitorBase&lt;string,
 extends <code class="literal">System.ArgumentException</code> and thus adds to the message provided by the thrower
 the parameter name. We could fix this with a custom visitor like we did till now,
 but this time we can write a little more general visitor
-for the english composition: a <code class="literal">Format&lt;TException&gt;</code>. <sup class="footnoteref">[<a name="id726613" href="#ftn.id726613" class="footnote" id="id726613">14</a>]</sup></p><script type="syntaxhighlighter" class="brush: csharp">public sealed class ReturnMessages : CompositeVisitor&lt;string&gt;.VisitorBase, IVisitor&lt;string, Exception&gt; {...}
+for the english composition: a <code class="literal">Format&lt;TException&gt;</code>. <sup class="footnoteref">[<a name="id806836" href="#ftn.id806836" class="footnote" id="id806836">14</a>]</sup></p><script type="syntaxhighlighter" class="brush: csharp">public sealed class ReturnMessages : CompositeVisitor&lt;string&gt;.VisitorBase, IVisitor&lt;string, Exception&gt; {...}
 public sealed class ConstantMessage : CompositeVisitor&lt;string&gt;.VisitorBase, IVisitor&lt;string, Exception&gt; {...}
 public sealed class InnerDomainExceptionUnwrap : CompositeVisitor&lt;string&gt;.VisitorBase, IVisitor&lt;string, Exception&gt; {...}
 public sealed class Format&lt;TException&gt; :
@@ -302,17 +302,17 @@ enhance the behaviour of a <code class="literal">CompositeVisitor</code> by simp
 trees and translate them to nice, human readable, messages or to SQL queries.
 Moreover, when the class hierachy grows, you don’t need to break existing
 visitors: you can always extend the behaviour of the composition by adding
-code, keeping the DLLs already deployed untouched.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_specifying_qualities"></a>Specifying qualities</h2></div></div></div><p>Coming soon.</p></div><div class="footnotes"><br /><hr style="width:100; text-align:left;margin-left: 0" /><div id="ftn.id726427" class="footnote"><p><sup class="footnote">[<a name="ftn.id726427" href="#id726427" class="simpara" id="ftn.id726427">10</a>] </sup>A closer look shows that execution
+code, keeping the DLLs already deployed untouched.</p></div><div class="section"><div class="titlepage"><div><div><h2 class="title" style="clear: both"><a id="about_specifying_qualities"></a>Specifying qualities</h2></div></div></div><p>Coming soon.</p></div><div class="footnotes"><br /><hr style="width:100; text-align:left;margin-left: 0" /><div id="ftn.id806650" class="footnote"><p><sup class="footnote">[<a name="ftn.id806650" href="#id806650" class="simpara" id="ftn.id806650">10</a>] </sup>A closer look shows that execution
 is actually a specific kind of interpretation, done by the CLR. Indeed, some stacktraces
 from <a class="ulink" href="http://msdn.microsoft.com/en-us/library/bb345362" target="_top">Expression&lt;TDelegate&gt;.Compile</a>
-show that expression tree compilation is done by a visitor producing the executable IL code.</p></div><div id="ftn.id726481" class="footnote"><p><sup class="footnote">[<a name="ftn.id726481" href="#id726481" class="simpara" id="ftn.id726481">11</a>] </sup>To reduce the effort of implementing the IVisitable interface,
+show that expression tree compilation is done by a visitor producing the executable IL code.</p></div><div id="ftn.id806704" class="footnote"><p><sup class="footnote">[<a name="ftn.id806704" href="#id806704" class="simpara" id="ftn.id806704">11</a>] </sup>To reduce the effort of implementing the IVisitable interface,
 a <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_VisitableBase.htm" target="_top">base class</a> exists.
 Moreover, a set of extension methods is provided for well known class hierarchy
-such as Exceptions, EventArgs and Expressions.</p></div><div id="ftn.id726505" class="footnote"><p><sup class="footnote">[<a name="ftn.id726505" href="#id726505" class="simpara" id="ftn.id726505">12</a>] </sup>We want the visitors to
+such as Exceptions, EventArgs and Expressions.</p></div><div id="ftn.id806728" class="footnote"><p><sup class="footnote">[<a name="ftn.id806728" href="#id806728" class="simpara" id="ftn.id806728">12</a>] </sup>We want the visitors to
 be stateless so that we can initialize each of them only once, at application
 start up, and then use the computation they express in parallel from different
-threads.</p></div><div id="ftn.id726513" class="footnote"><p><sup class="footnote">[<a name="ftn.id726513" href="#id726513" class="simpara" id="ftn.id726513">13</a>] </sup>We called this technique "managed cast". It consists
+threads.</p></div><div id="ftn.id806735" class="footnote"><p><sup class="footnote">[<a name="ftn.id806735" href="#id806735" class="simpara" id="ftn.id806735">13</a>] </sup>We called this technique "managed cast". It consists
 into delegating a cast to the object that you want to cast, so that it has
-control on the casting behaviour according to runtime conditions.</p></div><div id="ftn.id726613" class="footnote"><p><sup class="footnote">[<a name="ftn.id726613" href="#id726613" class="simpara" id="ftn.id726613">14</a>] </sup>Being such a use case
+control on the casting behaviour according to runtime conditions.</p></div><div id="ftn.id806836" class="footnote"><p><sup class="footnote">[<a name="ftn.id806836" href="#id806836" class="simpara" id="ftn.id806836">14</a>] </sup>Being such a use case
 so frequent, Epic provides an even more general version of this class: the
 <a class="ulink" href="http://epic.tesio.it/doc/api/html/T_Epic_Visitors_SimpleFormatter_1.htm" target="_top">SimpleFormatter&lt;TTarget&gt;</a>. </p></div></div></div><div class="navfooter"><hr /><table width="100%" summary="Navigation footer"><tr><td width="40%" align="left"><a accesskey="p" href="the_bellis_perennis.html">Prev</a> </td><td width="20%" align="center"><a accesskey="u" href="the_bellis_perennis.html">Up</a></td><td width="40%" align="right"> <a accesskey="n" href="epic-core.html">Next</a></td></tr><tr><td width="40%" align="left" valign="top">Part II. The bellis perennis </td><td width="20%" align="center"><a accesskey="h" href="manual.html">Table of Contents</a></td><td width="40%" align="right" valign="top"> Chapter 10. Epic.Core</td></tr></table></div></div></div></div><div id="footer"><div class="copyright">Copyright © 2010-2013 Giacomo Tesio</div></div><script type="text/javascript">SyntaxHighlighter.all()</script></body></html>

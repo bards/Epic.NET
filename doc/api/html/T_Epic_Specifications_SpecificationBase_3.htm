@@ -29,7 +29,7 @@
 [<span class="nolink">SerializableAttribute</span>]
 <span class="keyword">public</span> <span class="keyword">abstract</span> <span class="keyword">class</span> <span class="identifier">SpecificationBase</span>&lt;TSpecification, Candidate1, Candidate2&gt; : <a href="T_Epic_Specifications_SpecificationBase_2.htm">SpecificationBase</a>&lt;TSpecification, Candidate1&gt;, 
 	<a href="T_Epic_Specifications_ISpecification_1.htm">ISpecification</a>&lt;Candidate2&gt;, <span class="nolink">IEquatable</span>&lt;<a href="T_Epic_Specifications_ISpecification_1.htm">ISpecification</a>&lt;Candidate2&gt;&gt;, 
-	<a href="T_Epic_IVisitable.htm">IVisitable</a>, <a href="T_Epic_Math_IMapping_2.htm">IMapping</a>&lt;Candidate2, <span class="nolink">bool</span>&gt;
+	<a href="T_Epic_Specifications_ISpecification.htm">ISpecification</a>, <a href="T_Epic_IVisitable.htm">IVisitable</a>, <a href="T_Epic_Math_IMapping_2.htm">IMapping</a>&lt;Candidate2, <span class="nolink">bool</span>&gt;
 <span class="keyword">where</span> TSpecification : <span class="keyword">class</span>, <span class="nolink">Object</span>, <a href="T_Epic_Specifications_ISpecification_1.htm">ISpecification</a>&lt;Candidate1&gt;, <a href="T_Epic_Specifications_ISpecification_1.htm">ISpecification</a>&lt;Candidate2&gt;, <span class="nolink">IEquatable</span>&lt;TSpecification&gt;
 <span class="keyword">where</span> Candidate1 : <span class="keyword">class</span>
 <span class="keyword">where</span> Candidate2 : <span class="keyword">class</span>

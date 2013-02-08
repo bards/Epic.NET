@@ -47,12 +47,15 @@ commands must be void;
 should a command returns a value, it will go through an <code class="literal">out</code> parameter that
   will have a meaningful name;
 </li><li class="listitem">
-properties are readonly (thus they are always query);
+properties are readonly (thus they are always query) and their meaning map to
+  qualities of the object exposing them;
 </li><li class="listitem">
-entity’s queries should never throw exceptions (argument validation apart);
+access to properties should never throw exceptions (lazy loading is an anti-pattern);
 </li><li class="listitem">
 commands must be well documented and thrown exceptions should be
-  listed and explained already in the interfaces.
+  listed and explained already in the interfaces;
+</li><li class="listitem">
+commands can also raise (documented) events.
 </li></ul></div><div class="caution" style="margin-left: 0.5in; margin-right: 0.5in;"><table border="0" summary="Caution"><tr><td rowspan="2" align="center" valign="top" width="25"><img alt="[Caution]" src="images/caution.png" /></td><th align="left"></th></tr><tr><td align="left" valign="top"><p>This is probably the major concern in the choice of C# for modeling
 tasks. Checked exceptions would be valuable for us! We want that clients breaks
 as early as possible when we change the domain.</p></td></tr></table></div><p>We apply these rules without exception. Epic will provide a set of Gendarme’s
