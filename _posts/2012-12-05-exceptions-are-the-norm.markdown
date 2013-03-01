@@ -3,6 +3,7 @@ layout: post
 title: Exceptions are the norm!
 public: true
 author: giacomo
+description: Face it, every computation from real world can fail. The simplest computation that I can think of, the sum of two integers, can overflow.
 ---
 
 This year has been quite challenging. I've worked on a brand-new domain model
