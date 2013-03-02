@@ -84,7 +84,7 @@ A final tip
 -----------
 We all know that a IL knowledge in a resume makes you look like a nerd.
 
-Still, sometimes, it can make your life a lot easier.
+Still, sometimes, it can make your life a lot easier. 
 
 If you occasionally avoid exception chaining and you want to re-throw a caught 
 exception, you should remember to use the `throw` keyword without specifying 
@@ -99,17 +99,28 @@ was caught (it's only allowed within the body of a catch handler).
 Thus in the following CS code you will loose the stacktrace forever, since 
 it's compiled to a `throw` instruction:
 
-<div>
-<script src="https://gist.github.com/Shamar/072ea3e59c72cb285ec8.js"></script>
-</div>
+<script type="syntaxhighlighter" class="brush: csharp">try
+{
+    // some operation here...
+}
+catch(GoingShortIsNotAllowedException e)
+{
+    // some trace, log or wtf...
+    throw e;
+}</script>
 
 Thus, if you really can't wrap an exception that you caught before throwing it
-again, remember to `rethrow` it as in the following snippet (that will compile 
-to the desired IL):
+again, remember to `rethrow` it as in the following snippet:
 
-<div>
-<script src="https://gist.github.com/Shamar/dacbedccd9bd8cc2fa9b.js"></script>
-</div>
+<script type="syntaxhighlighter" class="brush: csharp">try
+{
+    // some operation here...
+}
+catch(GoingShortIsNotAllowedException e)
+{
+    // some trace, log or wtf...
+    throw; // this will be compiled to a rethrow IL instruction, preserving stacktrace
+}</script>
 
 This simple trick will help you (and your colleagues) a lot.
 
