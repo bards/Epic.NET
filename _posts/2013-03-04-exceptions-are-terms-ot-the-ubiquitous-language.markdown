@@ -99,17 +99,17 @@ was caught (it's only allowed within the body of a catch handler).
 Thus in the following CS code you will loose the stacktrace forever, since 
 it's compiled to a `throw` instruction:
 
-
+<div>
 <script src="https://gist.github.com/Shamar/072ea3e59c72cb285ec8.js"></script>
-
+<div>
 
 Thus, if you really can't wrap an exception that you caught before throwing it
 again, remember to `rethrow` it as in the following snippet (that will compile 
 to the desired IL):
 
-
+<div>
 <script src="https://gist.github.com/Shamar/dacbedccd9bd8cc2fa9b.js"></script>
-
+</div>
 
 This simple trick will help you (and your colleagues) a lot.
 
