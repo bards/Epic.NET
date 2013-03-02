@@ -62,13 +62,13 @@ From which dossier?
 Expressive exceptions
 ---------------------
 Expressive exceptions expose useful properties to the clients.  
-They help the user a lot, since through a proper UI rappresentation of the 
+They **help the user** a lot, since through a proper UI rappresentation of the 
 exception, he can understand why his own request cannot be satisfied.  
-In applications used all over the world, expressive exceptions simplify 
-localization and internalization, since useful properties can be shown 
+In applications used all over the world, expressive exceptions **simplify 
+localization and internalization**, since useful properties can be shown 
 differently at different latitudes, according to the user culture 
 (just like any other value object).  
-Moreover they can halve the maintainance cost, since developers can 
+Moreover they can **halve maintainance costs**, since developers can 
 rapidly identify what's happened and why from logs.
 
 A cheap but very useful practise is to throw useful messages with 
