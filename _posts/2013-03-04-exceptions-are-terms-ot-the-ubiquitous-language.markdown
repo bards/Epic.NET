@@ -63,7 +63,11 @@ Expressive exceptions
 ---------------------
 Expressive exceptions expose useful properties to the clients.  
 They help the user a lot, since through a proper UI rappresentation of the 
-exception, he can understand why his own request cannot be satisfied.
+exception, he can understand why his own request cannot be satisfied.  
+In applications used all over the world, expressive exceptions simplify 
+localization and internalization, since useful properties can be shown 
+differently at different latitudes, according to the user culture 
+(just like any other value object).  
 Moreover they can halve the maintainance cost, since developers can 
 rapidly identify what's happened and why from logs.
 
@@ -72,7 +76,7 @@ exceptions. This is particularly important when an exception can be thrown in
 more than situation. For example, you can get a lot more from a 
 `KeyNotFoundException` with a message containing the misspelled key.
 
-[Exception chaining][3] is another important tool that allow clients to 
+[Exception chaining][3] is another important technique that allows clients to 
 further understand **why** an exception occurred. 
 
 These look as common sense suggestions, but more often than not, good 
