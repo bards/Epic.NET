@@ -101,7 +101,7 @@ it's compiled to a `throw` instruction:
 
 <div>
 <script src="https://gist.github.com/Shamar/072ea3e59c72cb285ec8.js"></script>
-<div>
+</div>
 
 Thus, if you really can't wrap an exception that you caught before throwing it
 again, remember to `rethrow` it as in the following snippet (that will compile 
