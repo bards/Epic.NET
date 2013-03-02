@@ -6,7 +6,7 @@ public: false
 author: giacomo
 ---
 
-In the previous article we have already saw that [exceptions are normal result 
+In the previous article we have already saw that [exceptions are normal results 
 of reliable computations][1]. But [exceptions] are well known element of our
 daily life.
 
@@ -21,8 +21,8 @@ the computation out of the desired path.
 <a name="edge-cases-back"></a>
 In domain driven design, we distill a code model from the language that the 
 domain expert talks when he solves the problem.
-During the modeling session (or the lesson, if we see it from the expert's point 
-of view), the modeler asks many questions about the behaviours of the system 
+During the modeling session (or the lesson, from the expert's perspective), 
+the modeler asks many questions about the behaviours of the system 
 and, as a senior coder, he try to explore [edge cases][edge-cases-fn]. 
 
 From such analisys, we often get a deeper insight of the model that can either 
@@ -99,13 +99,17 @@ was caught (it's only allowed within the body of a catch handler).
 Thus in the following CS code you will loose the stacktrace forever, since 
 it's compiled to a `throw` instruction:
 
+
 <script src="https://gist.github.com/Shamar/072ea3e59c72cb285ec8.js"></script>
+
 
 Thus, if you really can't wrap an exception that you caught before throwing it
 again, remember to `rethrow` it as in the following snippet (that will compile 
 to the desired IL):
 
+
 <script src="https://gist.github.com/Shamar/dacbedccd9bd8cc2fa9b.js"></script>
+
 
 This simple trick will help you (and your colleagues) a lot.
 
