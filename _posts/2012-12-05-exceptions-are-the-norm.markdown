@@ -17,8 +17,8 @@ requests and deeper insights.
 The full application consists of 29 .NET solutions, 111 projects of different
 types developed in 11 months by an average of nine developers.
 
-We faced a lot of challenges, both technical and organizational and everybody
-have learned a lot in the process.
+Even after some years of DDD practice, we faced a lot of challenges, both 
+technical and organizational and everybody have learned a lot in the process. 
 
 To me, one of the most surprising lessons that I learned the hard way is about
 the meaning of exceptions and how they work in DDD projects.
