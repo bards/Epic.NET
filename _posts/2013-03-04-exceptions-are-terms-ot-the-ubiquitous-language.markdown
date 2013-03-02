@@ -32,6 +32,8 @@ previously modeled ones), sometimes it can even lead to (almost) restart from
 scratch. But often, edge cases are either **senseless** or **prohibited** 
 (in the context under analisys).
 
+An example from real world
+--------------------------
 Let consider simple case: a command that registers in an investment proposal 
 an order to dismiss a financial instrument that the customer does not own.
 
@@ -96,7 +98,7 @@ While `throw` pops the exception from the stack, **reset its stack trace** and
 throws it to the caller, `rethrow` just [rethrow][rethrow] the exception that 
 was caught (it's only allowed within the body of a catch handler). 
 
-Thus in the following CS code you will loose the stacktrace forever, since 
+Thus in the following CS code you will lose the stacktrace forever, since 
 it's compiled to a `throw` instruction:
 
 <script type="syntaxhighlighter" class="brush: csharp">try
