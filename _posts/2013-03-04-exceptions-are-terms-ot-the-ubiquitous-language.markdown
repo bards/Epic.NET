@@ -2,7 +2,7 @@
 layout: post
 title: Exceptions are terms of the Ubiquitous Language
 description: Exceptions are value-objects that should be carefully designed like any other term learnt from the domain expert.
-public: false
+public: true
 author: giacomo
 ---
 
