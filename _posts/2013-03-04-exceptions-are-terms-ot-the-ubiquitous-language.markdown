@@ -11,7 +11,7 @@ of reliable computations][1]. But [exceptions] are well known element of our
 daily life.
 
 The etimology of [exception][2] comes from the latin *excipiō*, 
-composition of *ex* and *capiō*. Litteraly, something that "take out" of the 
+composition of *ex* and *capiō*. Literally something that "take out" of the 
 something (a process, a rule, a law and so on).
 
 Since human experience leaves sediment in the languages that traverses, modern 
@@ -68,7 +68,7 @@ In applications used all over the world, expressive exceptions **simplify
 localization and internalization**, since useful properties can be shown 
 differently at different latitudes, according to the user culture 
 (just like any other value object).  
-Moreover they can **halve maintainance costs**, since developers can 
+Moreover they can **halve maintenance costs**, since developers can 
 rapidly identify what's happened and why from logs.
 
 A cheap but very useful practise is to throw useful messages with 
@@ -84,7 +84,7 @@ developers under pressure think that they can be faster, agile and leaner
 ignoring exceptional paths. Unfortunatly, this is true only for disposable 
 prototypes.   
 On applications that will run in production, well designed exceptions 
-pay well on maintainance (unless maintainance fees are your business model).
+pay well on long term (unless maintenance fees are your business model).
 
 A final tip
 -----------
