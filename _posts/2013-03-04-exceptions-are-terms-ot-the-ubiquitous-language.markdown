@@ -23,13 +23,13 @@ In domain driven design, we distill a code model from the language that the
 domain expert talks when he solves the problem.
 During the modeling session (or the lesson, from the expert's perspective), 
 the modeler asks many questions about the behaviours of the system 
-and, as a senior coder, he try to explore [edge cases][edge-cases-fn]. 
+and, as a senior coder, he try to explore [borderline cases][edge-cases-fn]. 
 
 From such analisys, we often get a deeper insight of the model that can either 
 confirm or not the previously defined terms. Sometimes it leads to deep 
 refactoring (like when you see that a new concepts interact heavily with the 
 previously modeled ones), sometimes it can even lead to (almost) restart from 
-scratch. But often, edge cases are either **senseless** or **prohibited** 
+scratch. But often, borderline cases are either **senseless** or **prohibited** 
 (in the context under analisys).
 
 An example from real world
@@ -135,8 +135,8 @@ padding-top:20px;">
 <p>[1 <a name="edge-cases-fn" href="#edge-cases-back">^</a>] This is often what
 makes the difference between a junior and a senior modeler: 
 while the junior one is fully focused to model rightly the intended business 
-behaviour, the senior one always keeps an eye open upon edge cases. 
-Indeed even the domain expert often ignores how many edge cases he daily 
+behaviour, the senior one always keeps an eye open upon unusual cases. 
+Indeed even the domain expert often ignores how many borderline situations he daily 
 handles by borrowing from his own experience in the business. But since the 
 application will be based on such experience, we have to encapsulate it in the 
 domain model, and thus we need to turn that knowledge conscious and explicit.
@@ -144,7 +144,7 @@ domain model, and thus we need to turn that knowledge conscious and explicit.
 This is a two fold aspect of DDD: it's more than an expensive software 
 development process, it's a tool to improve the customer understanding of its 
 own business. And believe me, a lot of the customer's business success comes 
-from his (almost inconscious) ability to identify edge cases and properly 
+from his (almost inconscious) ability to identify such cases and properly 
 handle them.</p>
 
 </div>
