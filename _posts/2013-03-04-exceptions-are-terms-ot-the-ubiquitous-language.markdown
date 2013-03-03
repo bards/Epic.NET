@@ -11,7 +11,7 @@ of reliable computations][1]. But [exceptions] are well known element of our
 daily life.
 
 The etimology of [exception][2] comes from the latin *excipiō*, 
-composition of *ex* and *capiō*. Literally something that "take out" of the 
+composition of *ex* and *capiō*. Literally something that "take out" of 
 something (a process, a rule, a law and so on).
 
 Since human experience leaves sediment in the languages that traverses, modern 
@@ -115,7 +115,7 @@ catch(GoingShortIsNotAllowedException e)
     throw e;
 }</script>
 
-Thus, if you really can't wrap an exception that you caught before throwing it
+If you really can't wrap an exception that you caught before throwing it
 again, remember to `rethrow` it as in the following snippet:
 
 <script type="syntaxhighlighter" class="brush: csharp">try
