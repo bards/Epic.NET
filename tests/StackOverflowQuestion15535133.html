@@ -1,0 +1,65 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:fb="http://www.facebook.com/2008/fbml" xmlns:og="http://opengraphprotocol.org/schema/">
+	<head  prefix="og: http://ogp.me/ns# fb: http://ogp.me/ns/fb#">
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.1/jquery.min.js"></script>
+		<title>Facebook Playgound</title>
+		<meta property="og:site_name" content="facebook playground" />
+		<meta property="fb:app_id" content="600581429957032" />
+		<meta property="fb:admins" content="579714244" />
+		<meta property="og:url" content="http://fb-playground.herokuapp.com/"/>
+		<meta property="og:title" content="Facebook Playground"/>
+		<meta property="og:description" content="derp derp derp"/>
+		<meta property="og:type" content="article"/>
+
+        <meta property="og:image[0]" content="http://fb-playground.herokuapp.com/img/1M.jpg"/>
+        <meta property="og:image[0]:width" content="300" />
+		<meta property="og:image[0]:height" content="300" />
+        <meta property="og:image[1]" content="http://fb-playground.herokuapp.com/img/2M.jpg"/>
+        <meta property="og:image[1]:width" content="300" />
+		<meta property="og:image[1]:height" content="300" />
+        <meta property="og:image[2]" content="http://fb-playground.herokuapp.com/img/3M.jpg"/>
+        <meta property="og:image[2]:width" content="300" />
+		<meta property="og:image[2]:height" content="300" />
+        <meta property="og:image[3]" content="http://fb-playground.herokuapp.com/img/4M.jpg"/>
+        <meta property="og:image[3]:width" content="300" />
+		<meta property="og:image[3]:height" content="300" />
+	</head>
+	<body>
+		<div id='fb-root' />
+		<h1>Hello World</h1>
+		<a href="#" class="fb-feed">Feed</a> | 
+		<a href="https://www.facebook.com/sharer/sharer.php?u=http://fb-playground.herokuapp.com" class="fb-share">Share</a>
+		<hr />
+		<img src="http://fb-playground.herokuapp.com/img/1M.jpg"/>
+        <img src="http://fb-playground.herokuapp.com/img/2M.jpg"/>
+        <img src="http://fb-playground.herokuapp.com/img/3M.jpg"/>
+        <img src="http://fb-playground.herokuapp.com/img/4M.jpg"/> 
+
+		<script type="text/javascript">
+			var onFacebookReady = function(){
+				if(window.FB) {
+					window.FB.init({
+						appId: '600581429957032',
+						channelUrl: 'channel.html'
+					});
+				}
+			};
+
+			window.fbAsyncInit = onFacebookReady;
+			$('.fb-feed').on('click', function(){
+				FB.ui(
+					  {
+					   method: 'stream.share', 
+					   display: 'popup',
+					   u: 'http://fb-playground.herokuapp.com/'
+					  },
+					  function(response) {
+					    console.log(response);
+					  }
+					);
+			});
+		</script>
+		<script src='//connect.facebook.net/en_US/all.js'></script>		
+	</body>
+</html>
