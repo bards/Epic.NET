@@ -16,7 +16,7 @@ Recently, I've been caught by an interesting debate with a few **very smart** gu
 
 Everything started with a [tweet][twt1] about [code coverage considered harmful][ccch] and a (casually) related thread started by Fabio Sogni in the [italian DDD mailing list][ddd-it], that touched topics like the TDD definition, the meaning of code coverage, how they related to DDD and much more.
 
-Now, in these days, [code coverage is considered harmful][ccch].
+These days, [code coverage is considered harmful][ccch].
 
 If you carefully read the Pearson's article, you will rapidly understand that all the issues proposed are related to either poor developers or poor architects/team leaders. Indeed, today, even [Pearson changed his mind][pchm].  
 But why smart people get trapped with these sort of dumb, absolute, assertions?
