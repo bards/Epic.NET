@@ -6,11 +6,11 @@ public: true
 author: giacomo
 ---
 
-**DISCLAIMER** With this post, I join the "[IWannaBeDijkstra club][considered-harmful]", with the hope to stop such shame.  
+**DISCLAIMER** With this post, I join the "[IWannaBeDijkstra club][considered-harmful]", with the hope to end it.  
 I'm not  [Edsger Dijkstra][dijkstra]. Neither are you. Live with it. ;-)
 
 What's harmful, now?
--------------------------------
+--------------------
 Recently, I've been caught by an interesting debate with a few **very smart** guys: [Arialdo Martini][arialdo], [Dan North][dan], [Alberto Brandolini][alberto] and [Uberto Barbini][uberto] among others.
 
 Everything started with a [tweet][twt1] about [code coverage considered harmful][ccch] and a (casually) related thread started by Fabio Sogni in the [italian DDD mailing list][ddd-it], that touched topics like the TDD definition, the meaning of code coverage, how they related to DDD and much more.
@@ -20,8 +20,8 @@ Now, in these days, [code coverage is considered harmful][ccch].
 If you carefully read the Pearson's article, you will rapidly understand that all the issues proposed are related to either poor developers or poor architects/team leaders. Indeed, today, even [Pearson changed his mind][pchm].  
 But why smart people get trapped with these sort of dumb, absolute, assertions?
 
-Buzzword Driven Development
-------------------------------------------
+Buzzwords Driven Development
+----------------------------
 The problem is the need of **buzzwords**, to exploit [a bug of market][information-asymmetry].
 
 A long time ago, far, far away, in a world dominated by [monsters][sc] named [Rose][rose] and [RUP][rup], a few fellow programmers, tried to address a **weird**, **over-complicated** development process with a few **well defined** practices from good sense. They lost some battle, but they **won** the war.   
@@ -44,7 +44,7 @@ The only bug there is the title: they are not pragmatics of TDD, they are pragma
 (the only... apart setters! :-D)
 
 TDC, what?
-----------------
+----------
 No, it's not a new buzzword, just an acronym.
 
 Robert Martin states:
@@ -64,7 +64,7 @@ A different and extremely valuable tool!
 But it's incredible that he didn't realized the **deep** difference. 
 
 Deep difference?
-------------------------
+----------------
 TDC is a different thing from TDD. 
 
 You draft the design and **then** you start with Green-Red-Refactor iteractions. 
@@ -88,7 +88,7 @@ For example, those who state that TDD is compatible with DDD, probably haven't e
 DDD is compatible with TDC (or, if you wanna use a cool buzzword, it is compatible with [Outside-In TDD][oitdd]).
 
 Back to code coverage
---------------------------------
+---------------------
 Is code coverage harmful, or not?
 
 Guys, **it's a tool**! A set of tools, actually.
@@ -108,14 +108,14 @@ A few things worth noting here:
   So let me say this loudly: **you still need testers and a brain!**
 
 Stupidity considered harmful
----------------------------------------
+----------------------------
 Stupidity **is** harmful. Like guns.  
 And [like guns][nra], stupidity feeds tons of people.
 
-Man, you can love your tools. But if you **marry** a tool, any tool, you are a stupid.  
+You can love your tools. But if you **marry** a tool, any tool, you are a stupid.  
 You should not be in the position of taking decisions.
 
-Thus, if you always use TDD (or DDD or TDC or code coverage or anything else) despite of the project's requirements, you are a dangerous mono-state automa.
+If you always use TDD (or DDD or TDC or code coverage or anything else) despite of the project's requirements, you are a dangerous mono-state automa.
 
 Specularly, if you refuse TDD (or DDD or TDC or code coverage or anything else) despite the actual value that such tool would provide in your specific case, you are wasting money just to hide your ignorance.
 
