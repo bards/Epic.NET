@@ -32,7 +32,7 @@ But back in those days, the most disruptive innovation was TDD: Test Driven **De
 Designed to avoid **needless abstractions**, TDD simply demanded **writing tests before**.  
 **First**. Before everything else. Even design had to emerge from tests and refactorings. 
 
-Indeed, one of our heros once stated:
+Indeed, one of our heroes once stated:
 
 <blockquote>The act of writing a unit test is more an act of design than of verification.</blockquote>
 
@@ -49,7 +49,7 @@ No, it's not a new buzzword, just an acronym.
 
 Robert Martin states:
 
-<blockquote>TDD is a discipline for programmers like double-entry bookkeeping is for accountants or sterile procedure is for surgeons.</blockquote>
+<blockquote>TDD is <b>a</b> discipline for programmers like double-entry bookkeeping is for accountants or sterile procedure is for surgeons.</blockquote>
 
 Right. It's the discipline of writing tests before design, to avoid any needless abstraction. Plain simple!
 
