@@ -17,7 +17,7 @@ Everything started with a [tweet][twt1] about [code coverage considered harmful]
 
 Now, in these days, [code coverage is considered harmful][ccch].
 
-If you carefully analyze the content of the Pearson's article, you will rapidly understand that all the issues proposed are related to either poor developers or poor architects/team leaders. Indeed, today, even [Pearson changed his mind][pchm].  
+If you carefully read the Pearson's article, you will rapidly understand that all the issues proposed are related to either poor developers or poor architects/team leaders. Indeed, today, even [Pearson changed his mind][pchm].  
 But why smart people get trapped with these sort of dumb, absolute, assertions?
 
 Buzzword Driven Development
@@ -32,7 +32,7 @@ Designed to avoid **needless abstractions**, TDD did simply require that you wri
 
 Indeed, one of our heros once stated:
 
-> The act of writing a unit test is more an act of design than of verification.
+<blockquote>The act of writing a unit test is more an act of design than of verification.</blockquote>
 
 Unfortunatly, while moving from an [A.S.S.][ass] to a [Super Senior Agile Software Craftman][craftmanship], [he forgot][pragmatics] the [why][swwhy].
 
@@ -47,11 +47,11 @@ I hate buzzwords, but I'm forced to coin a new one.
 
 Robert Martin states:
 
-> TDD is a discipline for programmers like double-entry bookkeeping is for accountants or sterile procedure is for surgeons.
+<blockquote>TDD is a discipline for programmers like double-entry bookkeeping is for accountants or sterile procedure is for surgeons.</blockquote>
 
 Sure. It is. A discipline that requires tests before design, to avoid any needless abstraction. Plain simple!
 
-Such discipline is required in some cases and it's not in others. And indeed he states that he doesn't practice TDD in a few cases. He knows that he doesn't need that tool and he avoids its use.
+Such discipline is required in some cases and it's not in others. And indeed he states that he doesn't practice TDD every times. He knows that he doesn't need that tool and he avoids its use.
 
 The point, however, is that you cannot partially apply TDD. 
 Indeed, a module's design can either emerge from tests (strictly avoiding needless abstractions) or come from other sources (since the needless abstractions are not your worse enemy).
@@ -79,11 +79,11 @@ Some coding, at least. And this is perfectly fine. TDC **can** be partially appl
 
 
 Unfortunatly, most of those who claim to do TDD, do TDC instead. But they don't want to be blamed as "casual testers", thus they replace a letter in their resumes and their corporate brochures.  
-It's not lying... it's marketing, my dear!
+It's not lying... it's marketing, stupid!
 
 But marketing is not for poor programmers like me, that despite manifestos, have to get the job done properly. I need a **precise** technical language to work with.
 
-Those who state that TDD is compatible with DDD, probably haven't ever done any of the two.
+For example, those who state that TDD is compatible with DDD, probably haven't ever done any of the two.
 
 DDD is compatible with TDC (or, if you wanna use a cooler buzzword, it is compatible with [Outside-In TDD][oitdd]).
 
