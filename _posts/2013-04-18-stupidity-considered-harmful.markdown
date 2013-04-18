@@ -70,11 +70,11 @@ TDC is a different thing from TDD.
 You draft the design and **then** you start with Green-Red-Refactor iteractions. 
 Perfect. Very useful!
 
-But, you can't call this practice TDD, or you lose the proper term to denote the original tool. 
+But you can't call this practice TDD, or you lose the proper term to denote the original tool! 
 
 And TDD (the true one) is a valuable tool, whenever your major problem is to prevent needless abstractions.
 
-That, let me say, is quite rare! TDD, is useful in **rare** cases, but when useful, it's **strategic**!
+That, let me say, is quite rare! TDD, is useful in **rare** cases! But when useful, it's **strategic**!
 
 TDC is a totally different beast, useful in much more common scenarios: **tests drive just the coding**.  
 Some coding, at least. And this is perfectly fine. TDC **can** be partially applied to any software component.
@@ -84,9 +84,8 @@ It's not lying... it's marketing, stupid!
 
 But marketing is not for poor programmers like me, that despite manifestos, have to get the job done properly. I need a **precise** technical language to work with.
 
-For example, those who state that TDD is compatible with DDD, probably haven't ever done any of the two.
-
-DDD is compatible with TDC (or, if you wanna use a cooler buzzword, it is compatible with [Outside-In TDD][oitdd]).
+For example, those who state that TDD is compatible with DDD, probably haven't ever done neither.  
+DDD is compatible with TDC (or, if you wanna use a cool buzzword, it is compatible with [Outside-In TDD][oitdd]).
 
 Back to code coverage
 --------------------------------
