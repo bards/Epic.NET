@@ -24,9 +24,10 @@ Buzzword Driven Development
 ------------------------------------------
 The problem is the need of **buzzwords**, to exploit [a bug of market][information-asymmetry].
 
-A long time ago, far, far away, in a world dominated by [monsters][sc] named [Rose][rose] and [RUP][rup], a few fellow programmers, tried to address a **weird**, **over-complicated** development process with a few **well defined** practices from good sense. They lost some battle, but finally they **won** the war.
+A long time ago, far, far away, in a world dominated by [monsters][sc] named [Rose][rose] and [RUP][rup], a few fellow programmers, tried to address a **weird**, **over-complicated** development process with a few **well defined** practices from good sense. They lost some battle, but they **won** the war.   
+Now, Agile is the new RUP.
 
-One of such practices was TDD: Test Driven **Development**.  
+But back in those days, one of the innovative practices from good sense was TDD: Test Driven **Development**.  
 Designed to avoid **needless abstractions**, TDD did simply require that you write **tests first**.  
 **First**. Before everything else. Even design had to emerge from tests and refactorings. 
 
@@ -43,40 +44,39 @@ The only bug there is the title: they are not pragmatics of TDD, they are pragma
 
 TDC, what?
 ----------------
-I hate buzzwords, but I'm forced to coin a new one.
+No, it's not a new buzzword, just an acronym.
 
 Robert Martin states:
 
 <blockquote>TDD is a discipline for programmers like double-entry bookkeeping is for accountants or sterile procedure is for surgeons.</blockquote>
 
-Sure. It is. A discipline that requires tests before design, to avoid any needless abstraction. Plain simple!
+Right. It's the discipline of writing tests before design, to avoid any needless abstraction. Plain simple!
 
 Such discipline is required in some cases and it's not in others. And indeed he states that he doesn't practice TDD every times. He knows that he doesn't need that tool and he avoids its use.
 
-The point, however, is that you cannot partially apply TDD. 
-Indeed, a module's design can either emerge from tests (strictly avoiding needless abstractions) or come from other sources (since the needless abstractions are not your worse enemy).
+The point, however, is that you cannot partially apply TDD. TDD is for whole software artifacts, not just whole classes or methods.
+Indeed, the design can have a single source: either tests (strictly avoiding needless abstractions) or something else (when the needless abstractions are not your worse enemy).
 
 Thus Martin is talking about the pragmatics of TDC: Test Driven **Coding**.  
 A different and extremely valuable tool!
 
-But it's incredible that he didn't realized the **deep** difference.
+But it's incredible that he didn't realized the **deep** difference. 
 
 Deep difference?
 ------------------------
 TDC is a different thing from TDD. 
 
-You draft the code design and **then** you start with Green-Red-Refactor iteractions. 
-Perfect. Very useful.
+You draft the design and **then** you start with Green-Red-Refactor iteractions. 
+Perfect. Very useful!
 
-But, if you call this practice TDD, you lose the proper term to denote the original tool. 
+But, you can't call this practice TDD, or you lose the proper term to denote the original tool. 
 
 And TDD (the true one) is a valuable tool, whenever your major problem is to prevent needless abstractions.
 
-That, let me say, is quite rare! TDD, indeed is useful in **rare** cases, but when it is, it's **strategic**!
+That, let me say, is quite rare! TDD, is useful in **rare** cases, but when useful, it's **strategic**!
 
 TDC is a totally different beast, useful in much more common scenarios: **tests drive just the coding**.  
 Some coding, at least. And this is perfectly fine. TDC **can** be partially applied to any software component.
-
 
 Unfortunatly, most of those who claim to do TDD, do TDC instead. But they don't want to be blamed as "casual testers", thus they replace a letter in their resumes and their corporate brochures.  
 It's not lying... it's marketing, stupid!
