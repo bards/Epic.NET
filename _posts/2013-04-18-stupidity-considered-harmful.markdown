@@ -36,7 +36,7 @@ Indeed, one of our heros once stated:
 
 <blockquote>The act of writing a unit test is more an act of design than of verification.</blockquote>
 
-Unfortunatly, while evolving from an [A.S.S.][ass] to a [Super Senior Agile Software Craftman][craftmanship], [he forgot][pragmatics] the [why][swwhy].
+Unfortunately, during the evolution from [A.S.S.][ass] a [Super Senior Agile Software Craftsman][craftmanship], [he forgot][pragmatics] the [why][swwhy].
 
 Don't get me wrong: [the Pragmatics of TDD][pragmatics] is a valuable article, very useful and smart.
 
