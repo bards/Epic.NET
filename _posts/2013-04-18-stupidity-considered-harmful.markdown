@@ -99,7 +99,7 @@ Thus:
 - if you are doing TDD, a **full** code coverage is a useful **development** tool: if your CI breaks when you push uncovered code, you know that an hated, needless abstraction has poisoned your code.  
   (and if the converse isn't true for your company, **you should change your hiring techniques**);
 - if you are doing TDC, **sometimes** it's useful too: for example when you have to code **higher level abstractions** or **valuable core domains**. Having the **CI that breaks on partial code coverage** works as a sort of [sword of Damocles][sod] that forces developers to carefully review code.  
-  (again, if such expensive reviews do not provide the value what they costs, **you should change your hiring techniques**)
+  (again, if such expensive reviews do not provide the value that they cost, **you should change your hiring techniques**)
 - if you are doing TDC and you don't need the quality that comes from such reviews, **you should not measure any kind of coverage!**
 
 A few things worth noting here:
