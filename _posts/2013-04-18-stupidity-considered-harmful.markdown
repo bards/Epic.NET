@@ -73,7 +73,7 @@ Perfect. Very useful!
 
 But you can't call this practice TDD, or you lose the proper term to denote the original tool! 
 
-And TDD (the true one) is a valuable tool, whenever your major problem is to prevent needless abstractions.
+And TDD (the true one) is a valuable tool, whenever your **major** problem is to prevent needless abstractions.
 
 That, let me say, is quite rare! TDD, is useful in **rare** cases! But when useful, it's **strategic**!
 
@@ -105,7 +105,7 @@ Thus:
 A few things worth noting here:
 
 - aiming for high coverage (97%, 98%, 99%...) is a pointless waste of money.
-- a full (100%) coverage can just ensure a **minimal** and **unmeasured** quality, not perfection. That's obvious but tons of people complains about the bugs that full coverage can't detect.  
+- a full (100%) coverage can just ensure a **minimal** and **unmeasured** quality, not perfection. That's obvious but tons of people complains about the bugs that full coverage can't avoid.  
   So let me say this loudly: **you still need testers and a brain!**
 
 Stupidity considered harmful
