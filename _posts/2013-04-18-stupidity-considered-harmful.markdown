@@ -22,7 +22,7 @@ But why smart people get trapped with these sort of dumb, absolute, assertions?
 
 Buzzword Driven Development
 ------------------------------------------
-The problem is the need of **buzzwords**, to exploit [a bug of software recruiting][information-asymmetry].
+The problem is the need of **buzzwords**, to exploit [a bug of market][information-asymmetry].
 
 A long time ago, far, far away, in a world dominated by [monsters][sc] named [Rose][rose] and [RUP][rup], a few fellow programmers, tried to address a **weird**, **over-complicated** development process with a few **well defined** practices from good sense. They lost some battle, but finally they **won** the war.
 
@@ -36,7 +36,7 @@ Indeed, one of our heros once stated:
 
 Unfortunatly, while moving from an [A.S.S.][ass] to a [Super Senior Agile Software Craftman][craftmanship], [he forgot][pragmatics] the [why][swwhy].
 
-Don't get me wrong: [the Pragmatics of TDD][pragmatics] is a valuable article, **very** useful and smart.
+Don't get me wrong: [the Pragmatics of TDD][pragmatics] is a valuable article, very useful and smart.
 
 The only bug there is the title: they are not pragmatics of TDD, they are pragmatics of **TDC**.  
 (the only... apart setters! :-D)
@@ -51,10 +51,10 @@ Robert Martin states:
 
 Sure. It is. A discipline that requires tests before design, to avoid any needless abstraction. Plain simple!
 
-Such discipline is required in some cases and it's not in others. And indeed he states that he doesn't practice TDD in a few cases. Perfect. He knows that he doesn't need that tool and he avoids its use.
+Such discipline is required in some cases and it's not in others. And indeed he states that he doesn't practice TDD in a few cases. He knows that he doesn't need that tool and he avoids its use.
 
 The point, however, is that you cannot partially apply TDD. 
-Indeed, a module's design can either emerge from tests (strictly avoiding needless abstractions) or come from other sources (since the needless abstractions are not your worse concern).
+Indeed, a module's design can either emerge from tests (strictly avoiding needless abstractions) or come from other sources (since the needless abstractions are not your worse enemy).
 
 Thus Martin is talking about the pragmatics of TDC: Test Driven **Coding**.  
 A different and extremely valuable tool!
@@ -81,8 +81,7 @@ Some coding, at least. And this is perfectly fine. TDC **can** be partially appl
 Unfortunatly, most of those who claim to do TDD, do TDC instead. But they don't want to be blamed as "casual testers", thus they replace a letter in their resumes and their corporate brochures.  
 It's not lying... it's marketing, my dear!
 
-But marketing is not for poor programmers like me, that despite manifestos, have to get the job done properly.  
-I need a **precise** language when I work.
+But marketing is not for poor programmers like me, that despite manifestos, have to get the job done properly. I need a **precise** technical language to work with.
 
 Those who state that TDD is compatible with DDD, probably haven't ever done any of the two.
 
@@ -105,22 +104,23 @@ Thus:
 A few things worth noting here:
 
 - aiming for high coverage (97%, 98%, 99%...) is a pointless waste of money.
-- a full (100%) coverage can just ensure a **minimal** and **unmeasured** quality, not perfection. That's obvious but tons of people complains about the bugs that full coverage can't detect.
-So let me say this loudly: **you still need testers and a brain!**
+- a full (100%) coverage can just ensure a **minimal** and **unmeasured** quality, not perfection. That's obvious but tons of people complains about the bugs that full coverage can't detect.  
+  So let me say this loudly: **you still need testers and a brain!**
 
 Stupidity considered harmful
 ---------------------------------------
 Stupidity **is** harmful. Like guns.  
-And like guns, stupidity feeds [angry people][nra].
+And [like guns][nra], stupidity feeds tons of people.
 
-Man, you can love your tools. But if you **marry** a tool, any tool, you are a stupid. You should not be in the position of taking decisions.
+Man, you can love your tools. But if you **marry** a tool, any tool, you are a stupid.  
+You should not be in the position of taking decisions.
 
 Thus, if you always use TDD (or DDD or TDC or code coverage or anything else) despite of the project's requirements, you are a dangerous mono-state automa.
 
 Specularly, if you refuse TDD (or DDD or TDC or code coverage or anything else) despite the actual value that such tool would provide in your specific case, you are wasting money just to hide your ignorance.
 
 Still, you are not the disease, you are the symptom.  
-What is harmful here, is the **stupidity** of those who hired you, recruiting by hyped buzzwords they do not understand.
+What is harmful here, is the **stupidity** of those who hired you, recruiting by **hyped buzzwords**.
 
 
 [considered-harmful]: http://en.wikipedia.org/wiki/Considered_harmful
