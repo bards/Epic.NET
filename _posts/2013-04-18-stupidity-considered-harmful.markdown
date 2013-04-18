@@ -6,7 +6,8 @@ public: true
 author: giacomo
 ---
 
-**DISCLAIMER** With this post, I join the "[IWannaBeDijkstra club][considered-harmful]", with the hope to end it.  
+**DISCLAIMER**  
+With this post, I join the "[IWannaBeDijkstra club][considered-harmful]", with the hope to end it.  
 I'm not  [Edsger Dijkstra][dijkstra]. Neither are you. Live with it. ;-)
 
 What's harmful, now?
