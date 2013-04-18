@@ -2,7 +2,7 @@
 layout: post
 title: Stupidity considered harmful
 description: I'm not Edsger Dijkstra. Neither are you. Live with it.
-public: false
+public: true
 author: giacomo
 ---
 
@@ -96,10 +96,10 @@ Guys, **it's a tool**! A set of tools, actually.
 Thus:
 
 - if you are doing TDD, a **full** code coverage is a useful **development** tool: if your CI breaks when you push uncovered code, you know that an hated, needless abstraction has poisoned your code.  
-  If the converse isn't true for your company, **you should change your hiring techniques**.
+  (and if the converse isn't true for your company, **you should change your hiring techniques**);
 - if you are doing TDC, **sometimes** it's useful too: for example when you have to code **higher level abstractions** or **valuable core domains**. Having the **CI that breaks on partial code coverage** works as a sort of [sword of Damocles][sod] that forces developers to carefully review code.  
-  Again, if such expensive reviews do not provide the value what they costs, **you should change your hiring techniques**.
-- if you are doing TDC and you don't need the quality that comes from such reviews, **you should not measure any kind of coverage**!
+  (again, if such expensive reviews do not provide the value what they costs, **you should change your hiring techniques**)
+- if you are doing TDC and you don't need the quality that comes from such reviews, **you should not measure any kind of coverage!**
 
 A few things worth noting here:
 
@@ -120,7 +120,7 @@ Thus, if you always use TDD (or DDD or TDC or code coverage or anything else) de
 Specularly, if you refuse TDD (or DDD or TDC or code coverage or anything else) despite the actual value that such tool would provide in your specific case, you are wasting money just to hide your ignorance.
 
 Still, you are not the disease, you are the symptom.  
-What is harmful here, is the **stupidity** of those who hired you, recruiting by **hyped buzzwords**.
+What is harmful here, is the **[stupidity][stupidity]** of those who hired you, **recruiting buzzwords**.
 
 
 [considered-harmful]: http://en.wikipedia.org/wiki/Considered_harmful
@@ -144,3 +144,4 @@ What is harmful here, is the **stupidity** of those who hired you, recruiting by
 [pragmatics]: http://blog.8thlight.com/uncle-bob/2013/03/06/ThePragmaticsOfTDD.html
 [sod]: http://en.wikipedia.org/wiki/Damocles#Sword_of_Damocles
 [nra]: http://home.nra.org/
+[stupidity]: http://en.wikipedia.org/wiki/Stupidity
