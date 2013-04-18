@@ -7,7 +7,7 @@ author: giacomo
 ---
 
 **DISCLAIMER**  
-With this post, I join the "[IWannaBeDijkstra club][considered-harmful]", with the hope to end it.  
+With this post, I join the "[IWannaBeDijkstra club][considered-harmful]", with the vain hope to end it.  
 I'm not  [Edsger Dijkstra][dijkstra]. Neither are you. Live with it. ;-)
 
 What's harmful, now?
@@ -23,7 +23,7 @@ But why smart people get trapped with these sort of dumb, absolute, assertions?
 
 Buzzwords Driven Development
 ----------------------------
-The problem is the need of **buzzwords**, to exploit [a bug of market][information-asymmetry].
+The problem is the need for **buzzwords**, to exploit [a bug of market][information-asymmetry].
 
 A long time ago, far, far away, in a world dominated by [monsters][sc] named [Rose][rose] and [RUP][rup], a few fellow programmers, tried to address a **weird**, **over-complicated** development process with a few **well defined** practices from good sense. They lost some battle, but they **won** the war.   
 
