@@ -25,17 +25,18 @@ Buzzword Driven Development
 The problem is the need of **buzzwords**, to exploit [a bug of market][information-asymmetry].
 
 A long time ago, far, far away, in a world dominated by [monsters][sc] named [Rose][rose] and [RUP][rup], a few fellow programmers, tried to address a **weird**, **over-complicated** development process with a few **well defined** practices from good sense. They lost some battle, but they **won** the war.   
-Now, Agile is the new RUP.
 
-But back in those days, one of the innovative practices from good sense was TDD: Test Driven **Development**.  
-Designed to avoid **needless abstractions**, TDD did simply require that you write **tests first**.  
+Now... Agile is the new RUP.
+
+But back in those days, the most disruptive innovation was TDD: Test Driven **Development**.  
+Designed to avoid **needless abstractions**, TDD simply demanded **writing tests before**.  
 **First**. Before everything else. Even design had to emerge from tests and refactorings. 
 
 Indeed, one of our heros once stated:
 
 <blockquote>The act of writing a unit test is more an act of design than of verification.</blockquote>
 
-Unfortunatly, while moving from an [A.S.S.][ass] to a [Super Senior Agile Software Craftman][craftmanship], [he forgot][pragmatics] the [why][swwhy].
+Unfortunatly, while evolving from an [A.S.S.][ass] to a [Super Senior Agile Software Craftman][craftmanship], [he forgot][pragmatics] the [why][swwhy].
 
 Don't get me wrong: [the Pragmatics of TDD][pragmatics] is a valuable article, very useful and smart.
 
