@@ -96,7 +96,7 @@ Guys, **it's a tool**! A set of tools, actually.
 
 Thus:
 
-- if you are doing TDD, **full** code coverage is a useful feedback during **development**: if your CI breaks when you push uncovered code, you know that an hated, needless abstraction has poisoned your code.  
+- if you are doing TDD, **full** code coverage is a useful **feedback** during **development**: if your CI breaks when you push uncovered code, you know that an hated, needless abstraction has poisoned your code.  
   (and if the converse isn't true for your company, **you should change your hiring techniques**);
 - if you are doing TDC, **sometimes** it's useful too: for example when you have to code **higher level abstractions** or **valuable core domains**. Having the **CI that breaks on partial code coverage** works as a sort of [sword of Damocles][sod] that forces developers to carefully review code. A lot of times.  
   (again, if such expensive reviews do not provide the value that they cost, **you should change your hiring techniques**)
