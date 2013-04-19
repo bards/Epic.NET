@@ -73,7 +73,7 @@ Perfect. Very useful!
 
 But you can't call this practice TDD, or you lose the proper term to denote the original tool! 
 
-And TDD (the true one) is a valuable tool, whenever your **major** problem is to prevent needless abstractions.
+And TDD (the true one) is a valuable tool, whenever your **worse** concern is to prevent needless abstractions.
 
 That, let me say, is quite rare! TDD, is useful in **rare** cases! But when useful, it's **strategic**!
 
@@ -116,7 +116,7 @@ And [like guns][nra], stupidity feeds tons of people.
 You can love your tools. But if you **marry** a tool, any tool, you are a stupid.  
 You should not be in the position of taking decisions.
 
-If you always use TDD (or DDD or TDC or code coverage or anything else) despite of the project's requirements, you are a dangerous mono-state automa.
+If you always use TDD (or DDD or TDC or code coverage or anything else) despite of the project's requirements, you are a dangerous mono-state [automaton][automata].
 
 Specularly, if you refuse TDD (or DDD or TDC or code coverage or anything else) despite the actual value that such tool would provide in your specific case, you are wasting money just to hide your ignorance.
 
@@ -146,3 +146,4 @@ What is harmful here, is the **[stupidity][stupidity]** of those who hired you, 
 [sod]: http://en.wikipedia.org/wiki/Damocles#Sword_of_Damocles
 [nra]: http://home.nra.org/
 [stupidity]: http://en.wikipedia.org/wiki/Stupidity
+[automata]: http://en.wikipedia.org/wiki/Automata_theory
